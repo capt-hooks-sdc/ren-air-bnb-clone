@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Calendar from './Calendar.jsx';
+import CalendarPicker from './CalenderPicker.jsx';
 
 
 function Booking() {
@@ -8,7 +8,7 @@ function Booking() {
   return(
   <h3>
     Booking
-    <Calendar/>
+    <CalendarPicker/>
   </h3>)
  }
 
