@@ -6,10 +6,10 @@ import Calendar from './Calendar.jsx';
 function CalenderPicker() {
 
   return(
-  <h3>
+  <div>
     CalenderPicker
     <Calendar/>
-  </h3>)
+  </div>)
  }
 
  export default CalenderPicker;
