@@ -14,7 +14,9 @@ class Booking extends React.Component {
       type: this.props.type,
       value: '',
       firstMoment: null,
-      lastMoment: null
+      lastMoment: null,
+      firstTextValue: "",
+      lastTextValue: ""
     }
 
     this.handleTextInput = this.handleTextInput.bind(this);
@@ -49,14 +51,14 @@ class Booking extends React.Component {
 
 
     if (type === 'checkIn-book_it') {
-
       this.setState({
-        firstMoment: date
+        firstMoment: date,
+        firstTextValue: date.format('MM/DD/YYYY')
       });
-
     } else {
       this.setState({
-        lastMoment: date
+        lastMoment: date,
+        lastTextValue: date.format('MM/DD/YYYY')
       });
     }
 
@@ -66,8 +68,8 @@ class Booking extends React.Component {
       return(
       <div>
         Booking
-        <DateTextInput type="checkIn-book_it" onSubmit={this.handleTextInput}/>
-        <DateTextInput type="checkOut-book_it" onSubmit={this.handleTextInput}/>
+        <DateTextInput type="checkIn-book_it" onSubmit={this.handleTextInput} value={this.state.firstTextValue}/>
+        <DateTextInput type="checkOut-book_it" onSubmit={this.handleTextInput} value={this.state.lastTextValue}/>
         <CalendarPicker firstMoment={this.state.firstMoment}
         lastMoment={this.state.lastMoment}
         raiseDate={this.raiseDate}/>

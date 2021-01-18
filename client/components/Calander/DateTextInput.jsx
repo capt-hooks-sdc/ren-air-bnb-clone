@@ -20,7 +20,6 @@ class DateTextInput extends React.Component {
     }
 
     handleSubmit(event) {
-      // alert('A date was submitted: ' + this.state.value);
       event.preventDefault();
       this.props.onSubmit(this.state.type, this.state.value);
     }
@@ -31,7 +30,7 @@ class DateTextInput extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label>
         {this.state.type}
-          <input className="date-imput" id={this.state.type} placeholder="Add date" type="text" placeholder='MM/DD/YYYY' onChange={this.handleChange} value={this.state.value} />
+          <input className="date-imput" id={this.state.type} placeholder="Add date" type="text" placeholder='MM/DD/YYYY' onChange={this.handleChange} value={this.state.value.length > 0 ? this.state.value : this.props.value} />
         </label>
       </form >
       )

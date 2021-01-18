@@ -40,7 +40,7 @@ class Calendar extends React.Component {
   createCell (i, currentMounth, isblank = false) {
 
 
-    let value = isblank ? "" : i;
+    let value = isblank ? "" : i.toString();
     let prefix = isblank ? "b" + i : "d";
 
     /// Set some defaults
@@ -49,13 +49,13 @@ class Calendar extends React.Component {
     let bwselectedBool = false;
 
     /// Check if this guy is selected
-    if (this.props.firstMoment && i === parseInt(this.props.firstMoment.format("D")) && currentMounth === this.props.firstMoment.format("M")) {
+    if (this.props.firstMoment && value === this.props.firstMoment.format("D") && currentMounth === this.props.firstMoment.format("M")) {
       selectedBool = true;
-    } else if (this.props.lastMoment && i === parseInt(this.props.lastMoment.format("D")) && currentMounth === this.props.lastMoment.format("M")) {
+    } else if (this.props.lastMoment && value === this.props.lastMoment.format("D") && currentMounth === this.props.lastMoment.format("M")) {
       selectedBool = true;
     }
     /// Check if this day is between two selected dates
-    else if (this.props.firstMoment && this.props.lastMoment) {
+    else if (this.props.firstMoment && this.props.lastMoment && value.length) {
 
       if (moment(`${currentMounth} ${i}, ${2021}`).isBetween(this.props.firstMoment, this.props.lastMoment)) {
         bwselectedBool = true;
