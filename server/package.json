@@ -6,7 +6,8 @@
   "scripts": {
     "lint" : "./node_modules/.bin/eslint",
     "start": "nodemon server.js",
-    "seed-db": "node database/seed.js"
+    "seed-db": "node database/seed.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",

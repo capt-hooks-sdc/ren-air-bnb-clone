@@ -3,13 +3,28 @@ import React from 'react';
 import Calendar from './Calendar.jsx';
 
 
-function CalenderPicker() {
+class CalenderPicker extends React.Component {
+  constructor(props) {
+    super(props);
 
-  return(
-  <div>
-    CalenderPicker
-    <Calendar/>
-  </div>)
+    // this.state = {
+    //   firstMoment: null,
+    //   lastMoment: null
+    // }
+}
+
+
+  render() {
+    return(
+      <div>
+        CalenderPicker
+        <Calendar firstMoment={this.props.firstMoment}
+        lastMoment={this.props.lastMoment}
+        raiseDate={this.props.raiseDate}
+        />
+      </div>)
+  }
+
  }
 
  export default CalenderPicker;

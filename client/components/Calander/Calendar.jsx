@@ -11,17 +11,8 @@ class Calendar extends React.Component {
     let timeData = props.momObj || moment();
     this.state = {
       momObj: timeData,
-
-      firstMoment: null,
-      firstDaySelected: null,
-      firstMonthSelected: null,
-      firstYearSelected: 2021,
-
-      lastDaySelected: null,
-      lastMonthSelected: null,
-      lastYearSelected: 2021,
-      lastMoment: null,
-
+      // firstMoment: this.props.firstMoment,
+      // lastMoment: this.props.lastMoment,
 
     }
 
@@ -57,18 +48,16 @@ class Calendar extends React.Component {
     let selectedBool = false;
     let bwselectedBool = false;
 
-
-
     /// Check if this guy is selected
-    if (i === this.state.firstDaySelected && currentMounth === this.state.firstMonthSelected ) {
+    if (this.props.firstMoment && i === parseInt(this.props.firstMoment.format("D")) && currentMounth === this.props.firstMoment.format("M")) {
       selectedBool = true;
-    } else if (i === this.state.lastDaySelected && currentMounth === this.state.lastMonthSelected ) {
+    } else if (this.props.lastMoment && i === parseInt(this.props.lastMoment.format("D")) && currentMounth === this.props.lastMoment.format("M")) {
       selectedBool = true;
     }
     /// Check if this day is between two selected dates
-    else if (this.state.firstMoment && this.state.lastMoment) {
+    else if (this.props.firstMoment && this.props.lastMoment) {
 
-      if (moment(`${currentMounth} ${i}, ${2021}`).isBetween(this.state.firstMoment, this.state.lastMoment)) {
+      if (moment(`${currentMounth} ${i}, ${2021}`).isBetween(this.props.firstMoment, this.props.lastMoment)) {
         bwselectedBool = true;
       }
     }
@@ -137,36 +126,33 @@ class Calendar extends React.Component {
     /// Calulate if this is a valid start of trip or end of trip day
 
     /// If no dates selectrd, drop start
-    if (!this.state.firstDaySelected && !this.state.lastDaySelected) {
+    if (!this.props.firstMoment) {
 
-      console.log(`${this.state.firstYearSelected}`)
-      console.log(`${month}`)
-      console.log(`${day}`)
+      var temp = moment(new Date(2021, parseInt(month) - 1, day))
 
-      this.setState({
-        firstDaySelected: day,
-        firstMonthSelected: month,
-        firstMoment: moment(new Date(this.state.firstYearSelected, parseInt(month) - 1, day))
-      })
-      /// If we have a first date but not a last
-    } else if (this.state.firstDaySelected && (!this.state.lastDaySelected && ! this.state.lastMonthSelected)) {
+      var date = new Date(2021, parseInt(month) - 1, day);
+      date = moment(date);
+      // this.setState({
+      //   firstMoment: moment(new Date(2021, parseInt(month) - 1, day))
+      // })
+
+      /// Raise the state to the bookings component
+      this.props.raiseDate('checkIn-book_it', date)
+
+    /// If we have a first date but not a last
+    } else if (this.props.firstMoment && (!this.props.lastMoment)) {
       // And this data is after the previous one
 
-      // let first = `${this.state.firstMonthSelected} ${this.state.firstDaySelected}, ${this.state.firstYearSelected}`;
-
-      let proposed = `${month} ${day}, ${2021}`;
-
-      // first = moment(first)
+      // let proposed = `${month} ${day}, ${2021}`;
+      let proposed = new Date(2021, parseInt(month) - 1, day)
       proposed = moment(proposed)
 
       /// If the propsed day is after the last day of the trip
-      if (this.state.firstMoment.diff(proposed) < 0 ) {
-        this.setState({
-          lastDaySelected: day,
-          lastMonthSelected: month,
-          lastMoment: proposed
-        })
+      if (this.props.firstMoment.diff(proposed) < 0 ) {
+
+        this.props.raiseDate('checkOut-book_it', proposed)
       }
+
 
     }
 

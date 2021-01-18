@@ -5,7 +5,7 @@ var con = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
-  database: process.env.DB_NAME
+  database: process.env.DB_NAME,
 });
 
 con.connect(function(err) {
@@ -65,6 +65,6 @@ let getLodgingById = function (id) {
 
 module.exports = {
 
-    getLodgingById: getLodgingById
+    getLodgingById: getLodgingById,
 
 }
