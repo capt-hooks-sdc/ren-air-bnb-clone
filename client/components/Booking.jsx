@@ -43,22 +43,24 @@ class Booking extends React.Component {
     * Sets the date in the calanders from the text inputs or clicking on the calander
     *
     * @param {string}   type Either  checkIn-book_it or
-    * @param {date object}   [date] a moment object
+    * @param {date object}   [date] a moment object if a date exsists or '' to clear it out;
     * @return {void}
     *
     * @sideEffect Set the state of the cmponet by updating either firstmoment or LastMoment
     */
 
+    var dateDate = date === '' ? null : date;
+    var dateText = date === '' ? '' : date.format('MM/DD/YYYY');
 
     if (type === 'checkIn-book_it') {
       this.setState({
-        firstMoment: date,
-        firstTextValue: date.format('MM/DD/YYYY')
+        firstMoment: dateDate,
+        firstTextValue: dateText
       });
     } else {
       this.setState({
-        lastMoment: date,
-        lastTextValue: date.format('MM/DD/YYYY')
+        lastMoment: dateDate,
+        lastTextValue: dateText
       });
     }
 

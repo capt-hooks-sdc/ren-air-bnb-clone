@@ -128,18 +128,14 @@ class Calendar extends React.Component {
     /// If no dates selectrd, drop start
     if (!this.props.firstMoment) {
 
-      var temp = moment(new Date(2021, parseInt(month) - 1, day))
-
+      // Create the date
       var date = new Date(2021, parseInt(month) - 1, day);
       date = moment(date);
-      // this.setState({
-      //   firstMoment: moment(new Date(2021, parseInt(month) - 1, day))
-      // })
 
       /// Raise the state to the bookings component
       this.props.raiseDate('checkIn-book_it', date)
 
-    /// If we have a first date but not a last
+    /// If we have a first date but not a last date, drop the last
     } else if (this.props.firstMoment && (!this.props.lastMoment)) {
       // And this data is after the previous one
 
@@ -153,7 +149,15 @@ class Calendar extends React.Component {
         this.props.raiseDate('checkOut-book_it', proposed)
       }
 
+    /// If we have both reset both and Drop the first
+    }  else if (this.props.firstMoment && this.props.lastMoment) {
+      /// Remove the last date
+      this.props.raiseDate('checkOut-book_it', '')
 
+      // Create the date of the new first date
+      var date = new Date(2021, parseInt(month) - 1, day);
+      date = moment(date);
+      this.props.raiseDate('checkIn-book_it', date)
     }
 
 
