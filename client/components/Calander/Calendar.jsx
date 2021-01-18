@@ -8,12 +8,9 @@ class Calendar extends React.Component {
   constructor(props) {
     super(props)
 
-    let timeData = props.momObj || moment();
-    this.state = {
-      momObj: timeData,
-      // firstMoment: this.props.firstMoment,
-      // lastMoment: this.props.lastMoment,
 
+    this.state = {
+      momObj: moment(),
     }
 
     this.prepHeaderRender = this.prepHeaderRender.bind(this);
@@ -21,6 +18,13 @@ class Calendar extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentDidMount () {
+    let timeData = this.props.momObj
+    // debugger;
+    this.setState({
+      momObj: timeData
+    })
+  }
 
   prepHeaderRender() {
     // Get month day headers
