@@ -9,8 +9,6 @@ class CalendarDay extends React.Component {
       reserved: this.props.reserved,
       selected: this.props.selected,
       bwselected: this.props.bwselected,
-      day: this.props.day,
-      month: this.props.month
     }
 
 
@@ -22,7 +20,7 @@ class CalendarDay extends React.Component {
 
   dayClickHandler() {
 
-    this.onClick(this.state.day, this.state.month);
+    this.onClick(this.props.day, this.props.month);
     // this.setState({
     //   selected: true,
     // })
@@ -47,7 +45,7 @@ class CalendarDay extends React.Component {
     }
     return (
       <td className={classStr} onClick={this.dayClickHandler}>{
-        this.state.day}
+        this.props.day}
       </td>
     )
   }

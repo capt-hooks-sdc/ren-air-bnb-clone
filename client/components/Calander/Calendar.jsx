@@ -9,22 +9,12 @@ class Calendar extends React.Component {
     super(props)
 
 
-    this.state = {
-      momObj: moment(),
-    }
-
     this.prepHeaderRender = this.prepHeaderRender.bind(this);
     this.prepDaysRender = this.prepDaysRender.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidMount () {
-    let timeData = this.props.momObj
-    // debugger;
-    this.setState({
-      momObj: timeData
-    })
-  }
+
 
   prepHeaderRender() {
     // Get month day headers
@@ -79,7 +69,7 @@ class Calendar extends React.Component {
 
 
   prepDaysRender () {
-    let today = this.state.momObj;
+    let today = this.props.momObj;
 
     /// Get current Mouth
     let currentMounth = today.format('M');
@@ -132,6 +122,7 @@ class Calendar extends React.Component {
     /// If no dates selectrd, drop start
     if (!this.props.firstMoment) {
 
+      debugger;
       // Create the date
       var date = new Date(2021, parseInt(month) - 1, day);
       date = moment(date);
@@ -176,8 +167,8 @@ class Calendar extends React.Component {
 
     let tableHeader = <tr>{header}</tr> ;
 
-    let currentMounth = this.state.momObj.format('MMMM')
-    let currentYear= this.state.momObj.format('YYYY')
+    let currentMounth = this.props.momObj.format('MMMM')
+    let currentYear= this.props.momObj.format('YYYY')
 
 
     let tableData = allRows.map ((row, i) =>
