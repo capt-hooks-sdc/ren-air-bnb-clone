@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import LogdingHeader from './LogdingHeader.jsx';
 import LodgingDetails from './LodgingDetails.jsx';
 import LodgingFeatures from './LodgingFeatures.jsx';

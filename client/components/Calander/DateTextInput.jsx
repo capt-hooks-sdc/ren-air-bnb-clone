@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 
 class DateTextInput extends React.Component {
 
@@ -22,19 +23,22 @@ class DateTextInput extends React.Component {
     handleSubmit(event) {
       event.preventDefault();
       this.props.onSubmit(this.state.type, this.state.value);
+
+
     }
 
 
-  render () {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-        {this.state.type}
-          <input className="date-imput" id={this.state.type} placeholder="Add date" type="text" placeholder='MM/DD/YYYY' onChange={this.handleChange} value={this.state.value.length > 0 ? this.state.value : this.props.value} />
-        </label>
-      </form >
-      )
-    }
+
+    render () {
+      return (
+        <form onSubmit={this.handleSubmit} ref="dateimput" onClick={() => {this.props.toggleCalanderVisable(true)}}>
+          <label>
+          {this.state.type}
+            <input className="date-imput" id={this.state.type} placeholder="Add date" type="text" placeholder='MM/DD/YYYY' onChange={this.handleChange} value={this.state.value.length > 0 ? this.state.value : this.props.value} />
+          </label>
+        </form >
+        )
+      }
  }
 
  export default DateTextInput;

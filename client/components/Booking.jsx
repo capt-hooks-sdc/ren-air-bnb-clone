@@ -16,11 +16,13 @@ class Booking extends React.Component {
       firstMoment: null,
       lastMoment: null,
       firstTextValue: "",
-      lastTextValue: ""
+      lastTextValue: "",
+      calanderVisable: false
     }
 
     this.handleTextInput = this.handleTextInput.bind(this);
     this.raiseDate = this.raiseDate.bind(this);
+    this.toggleCalanderVisable = this.toggleCalanderVisable.bind(this);
   }
 
   handleTextInput (type, date) {
@@ -33,6 +35,7 @@ class Booking extends React.Component {
       var date = moment(new Date(date));
 
       this.raiseDate(type, date);
+
 
     }
 
@@ -60,32 +63,48 @@ class Booking extends React.Component {
     } else {
       this.setState({
         lastMoment: dateDate,
-        lastTextValue: dateText
+        lastTextValue: dateText,
+        calanderVisable: false /// Remove the calnder from view
       });
     }
 
   } // End raiseDate
 
+  toggleCalanderVisable (visible) {
+    // debugger;
+    this.setState({
+      calanderVisable: visible
+    })
+  }
+
   render () {
-      return(
+
+    var calanderDiv = (<div></div>)
+    if (this.state.calanderVisable) {
+      calanderDiv = (        <div id='calander-picker'>
+      <CalendarPicker firstMoment={this.state.firstMoment}
+      lastMoment={this.state.lastMoment}
+      raiseDate={this.raiseDate}
+      toggleCalanderVisable={this.toggleCalanderVisable}/>
+      </div>)
+    }
+
+    return(
       <div id="booking-container">
         <div className='item-booking-header'>
         Booking
         </div>
 
         <div id='item-start-date'>
-          <DateTextInput type="checkIn-book_it" onSubmit={this.handleTextInput} value={this.state.firstTextValue}/>
+          <DateTextInput type="checkIn-book_it" onSubmit={this.handleTextInput} value={this.state.firstTextValue} toggleCalanderVisable={this.toggleCalanderVisable}/>
         </div>
 
         <div id='item-end-date'>
-        <DateTextInput type="checkOut-book_it" onSubmit={this.handleTextInput} value={this.state.lastTextValue}/>
+        <DateTextInput type="checkOut-book_it" onSubmit={this.handleTextInput} value={this.state.lastTextValue} toggleCalanderVisable={this.toggleCalanderVisable}/>
         </div>
 
-        <div id='calander-picker'>
-        <CalendarPicker firstMoment={this.state.firstMoment}
-        lastMoment={this.state.lastMoment}
-        raiseDate={this.raiseDate}/>
-        </div>
+        {calanderDiv}
+
       </div>)
   }
 }
