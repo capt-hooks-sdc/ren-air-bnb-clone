@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import LogdingHeader from './LogdingHeader.jsx';
 import LodgingDetails from './LodgingDetails.jsx';
 import LodgingFeatures from './LodgingFeatures.jsx';
@@ -19,7 +18,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <span>
+      <div>
         <div >
         <LogdingHeader />
         <LodgingDetails />
@@ -29,7 +28,7 @@ class App extends React.Component {
         <div >
         <Booking />
         </div>
-      </span>
+      </div>
     )
   }
 }

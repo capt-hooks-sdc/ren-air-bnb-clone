@@ -54,6 +54,7 @@ componentWillMount () {
           lastMoment={this.props.lastMoment}
           raiseDate={this.props.raiseDate}
           momObj={this.state.firstMonth}
+          toggleCalanderVisable={this.props.toggleCalanderVisable}
           />
         </div>
 
@@ -63,6 +64,7 @@ componentWillMount () {
           lastMoment={this.props.lastMoment}
           raiseDate={this.props.raiseDate}
           momObj={this.state.secondMonth}
+          toggleCalanderVisable={this.props.toggleCalanderVisable}
           />
         </div>
 
