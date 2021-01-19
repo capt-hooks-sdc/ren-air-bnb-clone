@@ -7,7 +7,6 @@ class CalenderPicker extends React.Component {
   constructor(props) {
     super(props);
 
-
     this.state = {
       firstMonth: null,
       secondMonth: null
@@ -48,6 +47,7 @@ componentWillMount () {
     console.log('In Render');
     return(
       <div id='calander-picker-container'>
+        <div id='date-text-spacer'></div>
         <div id='calender-prev'>
         <button onClick={() => {this.shiftMonths('left')}}>Left</button>
           <Calendar firstMoment={this.props.firstMoment}

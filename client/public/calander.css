@@ -19,9 +19,9 @@
   grid-row: under-header / under-dates;
   color: green;
   justify-self: center;
+  position:relative;
+  z-index:1;
 }
-
-
 
 
 #item-end-date {
@@ -29,29 +29,57 @@
   grid-row: under-header / under-dates;
   color: red;
   justify-self: center;
+  position:relative;
+  z-index:1
 }
 
 #calander-picker {
-  grid-column: left-edge / span 2;
-  grid-row: under-dates / span 1;
+  position: absolute;
+  background-attachment: scroll;
+  left: 0px;
+  top: 220px;
+  z-index: 0;
+  background-color: rgb(248, 249, 252);
+  border-color: black;
+  border-radius:16px;
+
 }
 
+/* In Calander Picker  */
 #calander-picker-container {
   display: grid;
   grid-template-columns: [left] 50% [centre] 50% [right];
-  grid-template-rows: [top] 100% [bottom]
+  grid-template-rows: [top] 20% [under-input] 80% [bottom]
 }
 
+#date-text-spacer {
+  height: 10px;
+  grid-column: left / span 2;
+  grid-row: top / under-input ;
+}
 
 .calender-prev {
   grid-column: left / centre;
-  grid-row: top / bottom;
+  grid-row: under-input / bottom;
 }
 
 .calender-post {
   grid-column: centre / right;
-  grid-row: top / bottom;
+  grid-row: under-input / bottom;
 }
+
+/* End Calander Picker  */
+
+.guest-box {
+  grid-column: left-edge / span 2;
+  grid-row: under-guests / span 1;
+}
+
+
+
+
+
+
 
 /* Calander CSS */
 .cal-day.selected {

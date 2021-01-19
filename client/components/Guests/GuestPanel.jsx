@@ -12,7 +12,7 @@ class GuestPanel extends React.Component {
 
   render () {
     return (
-      <div className="guest-box">
+      <div id="guest-box">
         Guest Panels
       </div>
     )

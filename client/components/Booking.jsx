@@ -3,7 +3,7 @@ import React from 'react';
 import CalendarPicker from './Calander/CalenderPicker.jsx';
 import DateTextInput from './Calander/DateTextInput.jsx';
 
-import Guests from './Guests/GuestPanel.jsx';
+import GuestPanel from './Guests/GuestPanel.jsx';
 
 import moment from 'moment'
 
@@ -107,6 +107,7 @@ class Booking extends React.Component {
         </div>
 
         {calanderDiv}
+        <GuestPanel/>
 
       </div>)
   }
