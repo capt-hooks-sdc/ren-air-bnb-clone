@@ -18,13 +18,13 @@ class App extends React.Component {
   render() {
     return (
       <span>
-        <div>
+        <div >
         <LogdingHeader />
         <LodgingDetails />
         <LodgingFeatures />
         <LodgingDescription />
         </div>
-        <div>
+        <div >
         <Booking />
         </div>
       </span>

@@ -122,7 +122,7 @@ class Calendar extends React.Component {
     /// If no dates selectrd, drop start
     if (!this.props.firstMoment) {
 
-      debugger;
+
       // Create the date
       var date = new Date(2021, parseInt(month) - 1, day);
       date = moment(date);

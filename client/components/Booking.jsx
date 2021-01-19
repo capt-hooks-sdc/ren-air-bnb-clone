@@ -68,13 +68,24 @@ class Booking extends React.Component {
 
   render () {
       return(
-      <div>
+      <div id="booking-container">
+        <div className='item-booking-header'>
         Booking
-        <DateTextInput type="checkIn-book_it" onSubmit={this.handleTextInput} value={this.state.firstTextValue}/>
+        </div>
+
+        <div id='item-start-date'>
+          <DateTextInput type="checkIn-book_it" onSubmit={this.handleTextInput} value={this.state.firstTextValue}/>
+        </div>
+
+        <div id='item-end-date'>
         <DateTextInput type="checkOut-book_it" onSubmit={this.handleTextInput} value={this.state.lastTextValue}/>
+        </div>
+
+        <div id='calander-picker'>
         <CalendarPicker firstMoment={this.state.firstMoment}
         lastMoment={this.state.lastMoment}
         raiseDate={this.raiseDate}/>
+        </div>
       </div>)
   }
 }

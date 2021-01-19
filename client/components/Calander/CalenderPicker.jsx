@@ -47,20 +47,26 @@ componentWillMount () {
   render() {
     console.log('In Render');
     return(
-      <div>
-        CalenderPicker
+      <div id='calander-picker-container'>
+        <div id='calender-prev'>
         <button onClick={() => {this.shiftMonths('left')}}>Left</button>
+          <Calendar firstMoment={this.props.firstMoment}
+          lastMoment={this.props.lastMoment}
+          raiseDate={this.props.raiseDate}
+          momObj={this.state.firstMonth}
+          />
+        </div>
+
+        <div id='calender-post'>
         <button onClick={() => {this.shiftMonths('right')}}>Right</button>
-        <Calendar firstMoment={this.props.firstMoment}
-        lastMoment={this.props.lastMoment}
-        raiseDate={this.props.raiseDate}
-        momObj={this.state.firstMonth}
-        />
-        <Calendar firstMoment={this.props.firstMoment}
-        lastMoment={this.props.lastMoment}
-        raiseDate={this.props.raiseDate}
-        momObj={this.state.secondMonth}
-        />
+          <Calendar firstMoment={this.props.firstMoment}
+          lastMoment={this.props.lastMoment}
+          raiseDate={this.props.raiseDate}
+          momObj={this.state.secondMonth}
+          />
+        </div>
+
+
       </div>)
   }
 
