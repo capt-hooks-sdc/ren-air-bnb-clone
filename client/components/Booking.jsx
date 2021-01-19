@@ -3,6 +3,8 @@ import React from 'react';
 import CalendarPicker from './Calander/CalenderPicker.jsx';
 import DateTextInput from './Calander/DateTextInput.jsx';
 
+import Guests from './Guests/GuestPanel.jsx';
+
 import moment from 'moment'
 
 
@@ -16,7 +18,9 @@ class Booking extends React.Component {
       firstMoment: null,
       lastMoment: null,
       firstTextValue: "",
-      lastTextValue: ""
+      lastTextValue: "",
+
+      totalGuests: 0
     }
 
     this.handleTextInput = this.handleTextInput.bind(this);
