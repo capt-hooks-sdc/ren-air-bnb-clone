@@ -17,7 +17,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <span>
+      <div>
         <div >
         <LogdingHeader />
         <LodgingDetails />
@@ -27,7 +27,7 @@ class App extends React.Component {
         <div >
         <Booking />
         </div>
-      </span>
+      </div>
     )
   }
 }

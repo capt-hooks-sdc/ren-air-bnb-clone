@@ -1,4 +1,4 @@
-/* Container CSS */
+/* Booking Container CSS */
 #booking-container {
   display: grid;
   grid-template-columns: [left-edge] 30% [centre] 30% [right-edge] ;
