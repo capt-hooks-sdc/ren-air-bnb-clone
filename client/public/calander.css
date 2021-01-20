@@ -1,7 +1,23 @@
+#page-layout {
+  display: grid;
+  grid-template-columns: [left-edge] 60% [centre] 40% [right-edge] ;
+  grid-template-rows: 100%;
+}
+
+#lodging-dis-zone {
+  grid-column: left-edge / centre;
+  grid-row: 1 / span 1;
+}
+
+#booking-zone {
+  grid-column: centre / right-edge;
+  grid-row: 1 / span 1;
+}
+
 /* Booking Container CSS */
 #booking-container {
   display: grid;
-  grid-template-columns: [left-edge] 30% [centre] 30% [right-edge] ;
+  grid-template-columns: [left-edge] 50% [centre] 50% [right-edge] ;
   grid-template-rows: [top-edge] 20% [under-header] 20% [under-dates] 20% [under-guests] 20% [under-reserver] 20% [bottom-edge] ;
 }
 
@@ -36,7 +52,7 @@
 #calander-picker {
   position: absolute;
   background-attachment: scroll;
-  left: 0px;
+  right: 0px;
   top: 220px;
   z-index: 0;
   background-color: rgb(248, 249, 252);
@@ -70,9 +86,10 @@
 
 /* End Calander Picker  */
 
-.guest-box {
+#guest-box {
   grid-column: left-edge / span 2;
-  grid-row: under-guests / span 1;
+  grid-row: under-reserver / span 1;
+  color: blue
 }
 
 

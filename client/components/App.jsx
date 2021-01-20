@@ -18,14 +18,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div >
+      <div id='page-layout'>
+        <div id='lodging-dis-zone'>
         <LogdingHeader />
         <LodgingDetails />
         <LodgingFeatures />
         <LodgingDescription />
         </div>
-        <div >
+        <div id='booking-zone'>
         <Booking />
         </div>
       </div>

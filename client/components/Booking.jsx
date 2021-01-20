@@ -20,12 +20,16 @@ class Booking extends React.Component {
       firstTextValue: "",
       lastTextValue: "",
       totalGuests: 0,
+      Adults: 0,
+      Children: 0,
+      Infants: 0,
       calanderVisable: false
     }
 
     this.handleTextInput = this.handleTextInput.bind(this);
     this.raiseDate = this.raiseDate.bind(this);
     this.toggleCalanderVisable = this.toggleCalanderVisable.bind(this);
+    this.incGuests = this.incGuests.bind(this);
   }
 
   handleTextInput (type, date) {
@@ -80,6 +84,25 @@ class Booking extends React.Component {
     })
   }
 
+  incGuests (type, number) {
+    console.log('in Ince Guests ');
+
+    if ((this.state[type] === 0 && number > 0) || this.state[type] > 0) {
+      var guestType = this.state[type] + number;
+
+      var totalGuests = this.state.totalGuests + number;
+
+      this.setState({
+        totalGuests: totalGuests,
+        [type] : guestType
+      })
+
+    }
+
+  }
+
+
+
   render () {
 
     var calanderDiv = (<div></div>)
@@ -107,7 +130,11 @@ class Booking extends React.Component {
         </div>
 
         {calanderDiv}
-        <GuestPanel/>
+        <div id="guest-box">
+          Guests: {this.state.totalGuests}
+          <GuestPanel incGuests={this.incGuests} Adults={this.state.Adults} Children={this.state.Children} Infants={this.state.Infants}/>
+        </div>
+
 
       </div>)
   }
