@@ -8,6 +8,7 @@ import LodgingDescription from './LodgingDescription.jsx';
 import Booking from './Booking.jsx';
 
 
+import styles from './masterLayout.css';
 
 
 
@@ -18,15 +19,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id='page-layout'>
-        <div id='lodging-dis-zone'>
+      <div id={styles['page-layout']}>
+        <div id={styles['lodging-dis-zone']}>
         <LogdingHeader />
         <LodgingDetails />
         <LodgingFeatures />
         <LodgingDescription />
         </div>
-        <div className='right-panel'>
-          <div id='booking-zone'>
+        <div className={styles['right-panel']}>
+          <div id={styles['booking-zone']}>
           <Booking />
           </div>
         </div>
