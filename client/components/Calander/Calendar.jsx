@@ -3,6 +3,7 @@ import moment from 'moment'
 
 import CalendarDay from './CalendarDay.jsx';
 
+import styles from './calander.css';
 
 class Calendar extends React.Component {
   constructor(props) {
@@ -177,7 +178,7 @@ class Calendar extends React.Component {
       {return <tr key={'' + i}>{row}</tr>})
 
     return (
-      <div className="cal-box">
+      <div className={styles['cal-box']}>
         <div>
           <h3>{currentMounth} {currentYear}</h3>
         </div>

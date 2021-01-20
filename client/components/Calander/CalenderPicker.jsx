@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment'
 import Calendar from './Calendar.jsx';
 
+import styles from './calander.css';
 
 class CalenderPicker extends React.Component {
   constructor(props) {
@@ -46,9 +47,9 @@ componentWillMount () {
   render() {
     console.log('In Render');
     return(
-      <div id='calander-picker-container'>
-        <div id='date-text-spacer'></div>
-        <div id='calender-prev'>
+      <div id={styles['calander-picker-container']}>
+        <div id={styles['date-text-spacer']}></div>
+        <div id={styles['calender-prev']}>
         <button onClick={() => {this.shiftMonths('left')}}>Left</button>
           <Calendar firstMoment={this.props.firstMoment}
           lastMoment={this.props.lastMoment}
@@ -58,7 +59,7 @@ componentWillMount () {
           />
         </div>
 
-        <div id='calender-post'>
+        <div id={styles['calender-post']}>
         <button onClick={() => {this.shiftMonths('right')}}>Right</button>
           <Calendar firstMoment={this.props.firstMoment}
           lastMoment={this.props.lastMoment}

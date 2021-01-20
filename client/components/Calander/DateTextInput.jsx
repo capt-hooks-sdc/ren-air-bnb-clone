@@ -33,7 +33,7 @@ class DateTextInput extends React.Component {
       return (
         <form onSubmit={this.handleSubmit} ref="dateimput" onClick={() => {this.props.toggleCalanderVisable(true)}}>
           <label>
-          {this.state.type}
+          <div className='blooking-label'>{this.state.type}</div>
             <input className="date-imput" id={this.state.type} placeholder="Add date" type="text" placeholder='MM/DD/YYYY' onChange={this.handleChange} value={this.state.value.length > 0 ? this.state.value : this.props.value} />
           </label>
         </form >

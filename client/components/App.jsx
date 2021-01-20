@@ -25,9 +25,13 @@ class App extends React.Component {
         <LodgingFeatures />
         <LodgingDescription />
         </div>
-        <div id='booking-zone'>
-        <Booking />
+        <div className='right-panel'>
+          <div id='booking-zone'>
+          <Booking />
+          </div>
         </div>
+
+
       </div>
     )
   }

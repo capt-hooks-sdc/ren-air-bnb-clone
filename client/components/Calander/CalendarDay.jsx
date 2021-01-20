@@ -1,5 +1,8 @@
 import React from "react";
 
+import styles from './calander.css';
+
+
 class CalendarDay extends React.Component {
   constructor(props) {
     super(props)
@@ -21,9 +24,7 @@ class CalendarDay extends React.Component {
   dayClickHandler() {
 
     this.onClick(this.props.day, this.props.month);
-    // this.setState({
-    //   selected: true,
-    // })
+
   }
 
 
@@ -32,19 +33,23 @@ class CalendarDay extends React.Component {
     console.log(`in Day Render: ${this.props.selected}`);
 
     let classStr = this.state.classes;
+    let specialStr = '';
     if (this.props.selected) {
-      console.log('In Selected');
-      classStr += " selected";
+      console.log('----------------------------In Selected');
+      specialStr += "selected";
     } else if (this.props.bwselected) {
       console.log('In BW Selected');
-      classStr += " bwselected";
+      specialStr += "bwselected";
     }
 
     if (this.state.reserved) {
-      classStr += " reserved";
+      specialStr += "reserved";
     }
+
+    console.log(styles)
+
     return (
-      <td className={classStr} onClick={this.dayClickHandler}>{
+      <td className={styles[specialStr]} onClick={this.dayClickHandler}>{
         this.props.day}
       </td>
     )

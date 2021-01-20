@@ -9,9 +9,20 @@
   grid-row: 1 / span 1;
 }
 
-#booking-zone {
+
+.right-panel {
   grid-column: centre / right-edge;
   grid-row: 1 / span 1;
+}
+
+#booking-zone {
+  border: 1px solid rgb(221, 221, 221); border-radius: 12px; padding: 24px; box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;;
+  box-sizing: border-box;
+  padding: 24px;
+
 }
 
 /* Booking Container CSS */
@@ -29,24 +40,41 @@
   justify-self: center;
 }
 
+.blooking-label {
+  color: rgb(34, 34, 34);
+  display: block;
+  font-family: Circular;
+  font-size: 10px;
+  left: 12px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  text-size-adjust: 100%;
+  text-transform: uppercase;
+  top: 12px;
+}
 
 #item-start-date {
   grid-column: left-edge /  centre;
   grid-row: under-header / under-dates;
-  color: green;
   justify-self: center;
   position:relative;
   z-index:1;
+  width: 75%;
 }
 
 
 #item-end-date {
   grid-column: centre /  right-edge;
   grid-row: under-header / under-dates;
-  color: red;
   justify-self: center;
   position:relative;
   z-index:1
+}
+
+.text-input {
+
 }
 
 #calander-picker {

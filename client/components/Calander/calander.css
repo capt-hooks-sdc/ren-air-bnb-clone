@@ -1,0 +1,61 @@
+
+/* In Calander Picker  */
+#calander-picker-container {
+  display: grid;
+  grid-template-columns: [left] 50% [centre] 50% [right];
+  grid-template-rows: [top] 20% [under-input] 80% [bottom]
+}
+
+#date-text-spacer {
+  height: 10px;
+  grid-column: left / span 2;
+  grid-row: top / under-input ;
+}
+
+.calender-prev {
+  grid-column: left / centre;
+  grid-row: under-input / bottom;
+}
+
+.calender-post {
+  grid-column: centre / right;
+  grid-row: under-input / bottom;
+}
+
+/* End Calander Picker  */
+
+#guest-box {
+  grid-column: left-edge / span 2;
+  grid-row: under-reserver / span 1;
+  color: blue
+}
+
+/* Calander CSS */
+.selected {
+  background-color: rgb(34, 34, 34);
+  color: white;
+}
+
+.bwselected {
+  background-color: rgb(225, 237, 241);
+}
+
+.cal-box {
+  color: rgb(34, 34, 34) !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+};
+
+
