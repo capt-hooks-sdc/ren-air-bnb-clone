@@ -1,0 +1,218 @@
+#bookingHeader {
+  align-items: baseline;
+  box-sizing: border-box;
+  color: rgb(34, 34, 34);
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  font-weight: 400;
+  justify-content: space-between;
+  line-height: 20px;
+  text-size-adjust: 100%;
+}
+
+#bookingHeaderPrice {
+  align-items: flex-start;
+  box-sizing: border-box;
+  color: rgb(34, 34, 34);
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  margin-bottom: 24px;
+  text-size-adjust: 100%;
+}
+
+#resInputContainer {
+  box-sizing: border-box;
+  color: resInputContainer;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 16px;
+  text-size-adjust: 100%;
+}
+
+#resInput {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  color: rgb(34, 34, 34);
+  line-height: 20px;
+}
+
+/* Inside resInput */
+
+#DateInputsBoxFlex {
+  display: flex;
+  line-height: 20px;
+}
+
+#DateInputsBoxInner {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0px;
+  border: none transparent;
+  color: rgb(34, 34, 34);
+  background-color: transparent;
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  outline: 0px;
+}
+
+#DateInputsBoxInnerAfterBoarder {
+  inset: 0px 0px -1px;
+  border-radius: 8px 8px 0px 0px;
+  border-color: rgb(176, 176, 176);
+  border-width: 1px;
+  z-index: 0;
+  position: absolute !important;
+  pointer-events: none !important;
+  border-style: solid !important;
+  display: block;
+}
+
+#StartDateBox {
+  position: relative;
+  flex: 1 1 0%;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  color: green;
+}
+
+#EndDateBox {
+  position: relative;
+  flex: 1 1 0%;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  border-left: 1px solid rgb(176, 176, 176);
+  color: red;
+}
+
+#GuestNumBoxFlex {
+  display: flex;
+  box-sizing: border-box;
+}
+
+#GuestNumBoxBorderTop {
+  background: none;
+  border-radius: 0px 0px 8px 8px;
+  inset: 0px 0px -1px;
+  position: absolute;
+  pointer-events: none;
+  box-sizing: border-box;
+  display: block;
+  border-color: rgb(176, 176, 176);
+}
+
+#GuestNumBox {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0px;
+  border: none transparent;
+  color: rgb(34, 34, 34);
+  background-color: transparent;
+  border-radius: 0px;
+  box-shadow: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  outline: 0px;
+}
+
+#GuestNumBoxBorderUnder {
+  inset: 0px 0px -1px;
+  border-radius: 0px 0px 8px 8px;
+  border-color: rgb(176, 176, 176);
+  border-width: 1px;
+  z-index: 0;
+  position: absolute;
+  pointer-events: none;
+  border-style: solid;
+}
+
+/* Reservation Button  */
+
+#reserverButtonBox {
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+#reserveButton {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  outline: none;
+  padding: 14px 24px;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  border: none;
+}
+
+#reserveButtonSpan1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+#reserveButtonSpan2 {
+  background-image: var(
+    --dls19-brand-gradient-radial,
+    radial-gradient(
+      circle at center,
+      #ff385c 0%,
+      #e61e4d 27.5%,
+      #e31c5f 40%,
+      #d70466 57.5%,
+      #bd1e59 75%,
+      #bd1e59 100%
+    )
+  );
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 200px;
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 1.25s ease 0s;
+  text-align: center !important;
+  color: #ff385c;
+}
+#reserveButtonSpan3 {
+  display: block;
+  position: relative;
+  pointer-events: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600px;
+  color: #ff385c;
+}

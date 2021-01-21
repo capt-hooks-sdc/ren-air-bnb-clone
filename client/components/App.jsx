@@ -8,7 +8,7 @@ import LodgingDescription from './LodgingDescription.jsx';
 import Booking from './Booking.jsx';
 
 
-import Styles from './App.module.css';
+import Styles from './topStyles/App.module.css';
 
 
 
