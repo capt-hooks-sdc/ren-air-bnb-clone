@@ -1,5 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+
+import Styles from './styles/DateTextInput.module.css';
 
 class DateTextInput extends React.Component {
 
@@ -32,9 +34,11 @@ class DateTextInput extends React.Component {
     render () {
       return (
         <form onSubmit={this.handleSubmit} ref="dateimput" onClick={() => {this.props.toggleCalanderVisable(true)}}>
-          <label>
-          <div className='blooking-label'>{this.state.type}</div>
-            <input className="date-imput" id={this.state.type} placeholder="Add date" type="text" placeholder='MM/DD/YYYY' onChange={this.handleChange} value={this.state.value.length > 0 ? this.state.value : this.props.value} />
+
+          <label className={Styles.bookingLabel}>
+
+            {this.state.type === 'checkIn-book_it' ? 'CHECK-IN' : 'CHECKOUT'}
+            <input className={Styles["date-imput"]} id={this.state.type} placeholder="Add date" type="text" placeholder='MM/DD/YYYY' onChange={this.handleChange} value={this.state.value.length > 0 ? this.state.value : this.props.value} />
           </label>
         </form >
         )

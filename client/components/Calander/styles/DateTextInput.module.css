@@ -1,0 +1,15 @@
+.bookingLabel {
+  color: rgb(34, 34, 34);
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  left: 12px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* position: absolute; */
+  text-overflow: ellipsis;
+  text-size-adjust: 100%;
+  text-transform: uppercase;
+  top: 12px;
+  color: rgb(34, 34, 34)
+};

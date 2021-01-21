@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from './calander.css';
+import Styles from './styles/CalenderDay.module.css';
 
 
 class CalendarDay extends React.Component {
@@ -46,10 +46,8 @@ class CalendarDay extends React.Component {
       specialStr += "reserved";
     }
 
-    console.log(styles)
-
     return (
-      <td className={styles[specialStr]} onClick={this.dayClickHandler}>{
+      <td className={Styles[specialStr]} onClick={this.dayClickHandler}>{
         this.props.day}
       </td>
     )

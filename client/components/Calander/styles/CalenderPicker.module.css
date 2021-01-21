@@ -1,0 +1,23 @@
+
+/* In Calander Picker  */
+#calander-picker-container {
+  display: grid;
+  grid-template-columns: [left] 50% [centre] 50% [right];
+  grid-template-rows: [top] 20% [under-input] 80% [bottom]
+}
+
+#date-text-spacer {
+  height: 10px;
+  grid-column: left / span 2;
+  grid-row: top / under-input ;
+}
+
+.calender-prev {
+  grid-column: left / centre;
+  grid-row: under-input / bottom;
+}
+
+.calender-post {
+  grid-column: centre / right;
+  grid-row: under-input / bottom;
+}
