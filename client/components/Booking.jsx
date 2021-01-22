@@ -174,6 +174,9 @@ class Booking extends React.Component {
             </div>
 
 
+            {/* Reservation */}
+
+
 
 
         </div>

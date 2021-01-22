@@ -1,8 +1,6 @@
 import React from 'react';
 
-import LogdingHeader from './LogdingHeader.jsx';
 import LodgingDetails from './LodgingDetails.jsx';
-import LodgingFeatures from './LodgingFeatures.jsx';
 import LodgingDescription from './LodgingDescription.jsx';
 
 import Booking from './Booking.jsx';
@@ -20,21 +18,25 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id={Styles['page-layout']}>
-        <div id={Styles['lodging-dis-zone']}>
-        <LogdingHeader />
+      <div className={Styles['infomation']}>
+        {/* Info */}
+
+        <div className={Styles['info']}>
         <LodgingDetails />
-        <LodgingFeatures />
+
+        </div>
+
+        {/* Booking */}
+
+        <div className={Styles['booking']}>
+        <Booking />
+        </div>
+        <div>
         <LodgingDescription />
         </div>
-        <div className={Styles['right-panel']}>
-          <div id={Styles['booking-zone']}>
-          <Booking />
-          </div>
-        </div>
-
 
       </div>
+
     )
   }
 }
