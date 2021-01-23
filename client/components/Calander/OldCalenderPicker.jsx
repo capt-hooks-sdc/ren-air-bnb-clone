@@ -48,6 +48,8 @@ componentWillMount () {
   render() {
     console.log('In Render');
     return(
+
+      // Original Calander
       <div id={Styles['calander-picker-container']}>
         <div id={Styles['date-text-spacer']}></div>
         <div id={Styles['calender-prev']}>
@@ -70,8 +72,9 @@ componentWillMount () {
           />
         </div>
 
+      </div>
 
-      </div>)
+      )
   }
 
  }

@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import Styles from './styles/DateTextInput.module.css';
 
+import CalenderPicker from './CalenderPicker.jsx'
+
 class DateTextInput extends React.Component {
 
   constructor(props) {
@@ -31,8 +33,6 @@ class DateTextInput extends React.Component {
 
     openDatePicker() {
       var nextState = this.state.datePickerVisable ? false : true;
-      console.log(nextState);
-
       this.setState({
         datePickerVisable: nextState
       })
@@ -43,50 +43,18 @@ class DateTextInput extends React.Component {
     render () {
       var hidden;
       if (this.state.datePickerVisable) {
-        hidden = (
+        // hidden = <CalenderPicker raiseDate={this.props.raiseDate}/>
 
-          <div className={Styles['hidden-calander-container']} >
-            <div className={Styles['hidden-calander-div']}>
-
-              <div className={Styles['hidden-nights-sum']}>
-                <div className={Styles['number-nights']}>5 nights</div>
-                <div className={Styles['dates-of-nights']}>Apr 28, 2021 - May 3, 2021</div>
-              </div>
-
-              <div className={Styles['hidden-date-input']}>
-                <div className={Styles['check-in']}>
-                  <div className={Styles['date-label']}> Check In </div>
-                  <div className={Styles['date-value']}>01/01/2021</div>
-                </div>
-
-
-                <div className={Styles['check-out']}>
-                  <div className={Styles['date-label']}>Check Out</div>
-                  <div className={Styles['date-value']}>01/30/2021</div>
-                </div>
-              </div>
-
-              <div className={Styles["hidden-close-button"]}>
-                <button className={Styles["clear-dates"]}>Clear Dates</button>
-                <button className={Styles["close-button"]}>Close</button>
-              </div>
-
-              </div>
-
-          </div>
-
-
-
-        )
+        hidden = (<CalenderPicker firstMoment={this.props.firstMoment}
+          lastMoment={this.props.lastMoment}
+          raiseDate={this.props.raiseDate}
+          toggleCalanderVisable={this.toggleCalanderVisable}/>)
       }
 
       return (
         <div className={Styles['date-input']}>
 
           {hidden}
-
-
-
 
           <div className={Styles['check-in']} onClick={this.openDatePicker}>
             <div className={Styles['date-label']}> Check In </div>

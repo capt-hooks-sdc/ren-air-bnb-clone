@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CalendarPicker from './Calander/CalenderPicker.jsx';
+
 import DateTextInput from './Calander/DateTextInput.jsx';
 
 import GuestPanel from './Guests/GuestPanel.jsx';
@@ -110,15 +110,16 @@ class Booking extends React.Component {
 
   render () {
 
-    var calanderDiv = (<div></div>)
-    if (this.state.calanderVisable) {
-      calanderDiv = (        <div id='calander-picker'>
-      <CalendarPicker firstMoment={this.state.firstMoment}
-      lastMoment={this.state.lastMoment}
-      raiseDate={this.raiseDate}
-      toggleCalanderVisable={this.toggleCalanderVisable}/>
-      </div>)
-    }
+    // var calanderDiv = (<div></div>)
+    // if (this.state.calanderVisable) {
+
+    //   calanderDiv = (<div id='calander-picker'>
+    //   <CalendarPicker firstMoment={this.state.firstMoment}
+    //   lastMoment={this.state.lastMoment}
+    //   raiseDate={this.raiseDate}
+    //   toggleCalanderVisable={this.toggleCalanderVisable}/>
+    //   </div>)
+    // }
 
     return(
 
@@ -179,7 +180,7 @@ class Booking extends React.Component {
 
 
 
-          <DateTextInput />
+          <DateTextInput raiseDate={this.raiseDate} firstMoment={this.state.firstMoment} lastMoment={this.state.lastMoment}/>
           {/* <div className={Styles['check-in']}>
             <div className={Styles['date-label']}> Check In </div>
             <div className={Styles['date-value']}>01/01/2021</div>
