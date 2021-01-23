@@ -28,13 +28,13 @@ class GuestPanel extends React.Component {
 
 
             <div className={Styles['guest-type-change']}>
-              <span className={Styles['guest-btn']}>
+              <span className={Styles['guest-btn']} onClick={() => {this.props.incGuests('Adults', -1)}}>
                 <SVGZoo name='minus' />
               </span>
 
-              <div className={Styles['guest-type-num']}>0</div>
+              <div className={Styles['guest-type-num']}>{this.props.Adults}</div>
 
-              <div className={Styles['guest-btn']}>
+              <div className={Styles['guest-btn']} onClick={() => {this.props.incGuests('Adults', 1)}}>
               <SVGZoo name='plus' />
               </div>
             </div>
@@ -44,19 +44,19 @@ class GuestPanel extends React.Component {
 
           <div className={Styles['guest-option']}>
             <div>
-              <div className={Styles['guest-label']}>Children</div>
+              <div className={Styles['guest-label']} >Children</div>
               <div className={Styles['guest-desc']}>Ages 2-12</div>
             </div>
 
 
             <div className={Styles['guest-type-change']}>
-              <span className={Styles['guest-btn']}>
+              <span className={Styles['guest-btn']} onClick={() => {this.props.incGuests('Children', -1)}}>
               <SVGZoo name='minus' />
               </span>
 
-              <div className={Styles['guest-type-num']}>0</div>
+              <div className={Styles['guest-type-num']}>{this.props.Children}</div>
 
-              <div className={Styles['guest-btn']}>
+              <div className={Styles['guest-btn']} onClick={() => {this.props.incGuests('Children', 1)}}>
                 <SVGZoo name='plus' />
               </div>
             </div>
@@ -72,13 +72,13 @@ class GuestPanel extends React.Component {
 
 
             <div className={Styles['guest-type-change']}>
-              <span className={Styles['guest-btn']}>
+              <span className={Styles['guest-btn']} onClick={() => {this.props.incGuests('Infants', -1)}}>
                 <SVGZoo name='minus' />
               </span>
 
-              <div className={Styles['guest-type-num']}>0</div>
+              <div className={Styles['guest-type-num']}>{this.props.Infants}</div>
 
-              <div className={Styles['guest-btn']}>
+              <div className={Styles['guest-btn']} onClick={() => {this.props.incGuests('Infants', 1)}}>
                 <SVGZoo name='plus' />
               </div>
             </div>
@@ -91,7 +91,7 @@ class GuestPanel extends React.Component {
 
           <div></div>
           <div className={Styles["hidden-close-button"]}>
-            <button className={Styles["close-button"]}>Close</button>
+            <button className={Styles["close-button"]} onClick={() => {this.props.toggleGuestsVisable(false)}}>Close</button>
           </div>
 
 

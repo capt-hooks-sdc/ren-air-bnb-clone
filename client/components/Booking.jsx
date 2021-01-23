@@ -193,7 +193,7 @@ class Booking extends React.Component {
 
           <div>
           <div className={Styles['guests-label']}>Guests</div>
-          <div className={Styles['guests-value']}>2 guests</div>
+          <div className={Styles['guests-value']}>{this.state.totalGuests} guests</div>
           </div>
 
           <div className={Styles['select-guests']} >
@@ -204,7 +204,13 @@ class Booking extends React.Component {
     </div>
 
 
-    <GuestPanel guestVisable={this.state.guestVisable}/>
+    <GuestPanel guestVisable={this.state.guestVisable}
+    Adults={this.state.Adults}
+    Children={this.state.Children}
+    Infants={this.state.Infants}
+    incGuests={this.incGuests}
+    toggleGuestsVisable={this.toggleGuestsVisable}
+    />
 
     {/* <span className={Styles['hidden-guest-containter']}>
       <div className={Styles['hidden-guest-div']}>
