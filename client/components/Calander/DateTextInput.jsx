@@ -13,12 +13,12 @@ class DateTextInput extends React.Component {
     this.state = {
       type: this.props.type,
       value: '',
-      datePickerVisable:false
+      // datePickerVisable:false
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.openDatePicker = this.openDatePicker.bind(this);
+    // this.openDatePicker = this.openDatePicker.bind(this);
   }
 
     handleChange(event) {
@@ -31,24 +31,24 @@ class DateTextInput extends React.Component {
       this.props.onSubmit(this.state.type, this.state.value);
     }
 
-    openDatePicker() {
-      var nextState = this.state.datePickerVisable ? false : true;
-      this.setState({
-        datePickerVisable: nextState
-      })
-    }
+    // openDatePicker() {
+    //   var nextState = this.state.datePickerVisable ? false : true;
+    //   this.setState({
+    //     datePickerVisable: nextState
+    //   })
+    // }
 
 
 
     render () {
       var hidden;
-      if (this.state.datePickerVisable) {
+      if (this.props.calanderVisable) {
         // hidden = <CalenderPicker raiseDate={this.props.raiseDate}/>
 
         hidden = (<CalenderPicker firstMoment={this.props.firstMoment}
           lastMoment={this.props.lastMoment}
           raiseDate={this.props.raiseDate}
-          toggleCalanderVisable={this.toggleCalanderVisable}/>)
+          toggleCalanderVisable={this.props.toggleCalanderVisable}/>)
       }
 
       return (
@@ -56,13 +56,13 @@ class DateTextInput extends React.Component {
 
           {hidden}
 
-          <div className={Styles['check-in']} onClick={this.openDatePicker}>
+          <div className={Styles['check-in']} onClick={this.props.toggleCalanderVisable}>
             <div className={Styles['date-label']}> Check In </div>
             <div className={Styles['date-value']}>01/01/2021</div>
           </div>
 
 
-          <div className={Styles['check-out']} onClick={this.openDatePicker}>
+          <div className={Styles['check-out']} onClick={this.props.toggleCalanderVisable}>
             <div className={Styles['date-label']}>Check Out</div>
             <div className={Styles['date-value']}>01/30/2021</div>
           </div>

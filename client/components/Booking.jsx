@@ -110,17 +110,6 @@ class Booking extends React.Component {
 
   render () {
 
-    // var calanderDiv = (<div></div>)
-    // if (this.state.calanderVisable) {
-
-    //   calanderDiv = (<div id='calander-picker'>
-    //   <CalendarPicker firstMoment={this.state.firstMoment}
-    //   lastMoment={this.state.lastMoment}
-    //   raiseDate={this.raiseDate}
-    //   toggleCalanderVisable={this.toggleCalanderVisable}/>
-    //   </div>)
-    // }
-
     return(
 
       <div className={Styles["BookingContainer"]}>
@@ -182,7 +171,9 @@ class Booking extends React.Component {
 
           <DateTextInput raiseDate={this.raiseDate}
           firstMoment={this.state.firstMoment}
-          lastMoment={this.state.lastMoment}/>
+          lastMoment={this.state.lastMoment}
+          calanderVisable={this.state.calanderVisable}
+          toggleCalanderVisable={this.toggleCalanderVisable}/>
           {/* <div className={Styles['check-in']}>
             <div className={Styles['date-label']}> Check In </div>
             <div className={Styles['date-value']}>01/01/2021</div>

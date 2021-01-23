@@ -145,7 +145,7 @@ class Calendar extends React.Component {
         this.props.raiseDate('checkOut-book_it', proposed)
 
         /// Set the Calander visability to false
-        // this.props.toggleCalanderVisable(false);
+        this.props.toggleCalanderVisable();
       }
 
     /// If we have both reset both and Drop the first

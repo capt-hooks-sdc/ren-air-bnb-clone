@@ -45,6 +45,8 @@ class PickerDateTextInput extends React.Component {
         value = ''
       }
 
+      console.log(`date Value ${value}`)
+
       return (
       <div className={Styles['check-out']}>
         <div className={Styles['date-label']}>Check Out</div>
