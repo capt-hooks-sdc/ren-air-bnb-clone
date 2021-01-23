@@ -49,6 +49,8 @@ componentWillMount () {
 
   render() {
     console.log('In Render');
+    console.log(this.firstMoment)
+    console.log(this.LastMoment)
     return(
 
       <div className={Styles['hidden-calander-container']} >
@@ -60,48 +62,41 @@ componentWillMount () {
         </div>
 
         <div className={Styles['hidden-date-input']}>
-{/*
-          <div className={Styles['check-in']}>
-            <div className={Styles['date-label']}> Check In </div>
-            <div className={Styles['date-value']}>01/01/2021</div>
-          </div>
-
-          <div className={Styles['check-out']}>
-            <div className={Styles['date-label']}>Check Out</div>
-            <div className={Styles['date-value']}>01/30/2021</div>
-          </div> */}
 
 
-        <PickerDateTextInput />
-        <PickerDateTextInput />
+
+        <PickerDateTextInput value={this.props.firstMoment }
+        onSubmit={this.props.raiseDate}
+        type={'checkIn-book_it'}/>
+
+        <PickerDateTextInput value={this.props.lastMoment}
+        onSubmit={this.props.raiseDate}
+        type={'checkOut-book_it'}/>
 
         </div>
 
         {/* // Original Calander */}
 
 
-        <div id={Styles['calender-prev']}>
-        <button onClick={() => {this.shiftMonths('left')}}>Left</button>
-          <Calendar firstMoment={this.props.firstMoment}
-          lastMoment={this.props.lastMoment}
-          raiseDate={this.props.raiseDate}
-          momObj={this.state.firstMonth}
-          toggleCalanderVisable={this.props.toggleCalanderVisable}
-          />
-        </div>
+          <div id={Styles['calender-prev']}>
+          <button onClick={() => {this.shiftMonths('left')}}>Left</button>
+            <Calendar firstMoment={this.props.firstMoment}
+            lastMoment={this.props.lastMoment}
+            raiseDate={this.props.raiseDate}
+            momObj={this.state.firstMonth}
+            toggleCalanderVisable={this.props.toggleCalanderVisable}
+            />
+          </div>
 
-        <div id={Styles['calender-post']}>
-        <button onClick={() => {this.shiftMonths('right')}}>Right</button>
-          <Calendar firstMoment={this.props.firstMoment}
-          lastMoment={this.props.lastMoment}
-          raiseDate={this.props.raiseDate}
-          momObj={this.state.secondMonth}
-          toggleCalanderVisable={this.props.toggleCalanderVisable}
-          />
-        </div>
-
-
-
+          <div id={Styles['calender-post']}>
+          <button onClick={() => {this.shiftMonths('right')}}>Right</button>
+            <Calendar firstMoment={this.props.firstMoment}
+            lastMoment={this.props.lastMoment}
+            raiseDate={this.props.raiseDate}
+            momObj={this.state.secondMonth}
+            toggleCalanderVisable={this.props.toggleCalanderVisable}
+            />
+          </div>
 
 
         <div className={Styles["hidden-close-button"]}>

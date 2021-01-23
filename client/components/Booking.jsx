@@ -180,7 +180,9 @@ class Booking extends React.Component {
 
 
 
-          <DateTextInput raiseDate={this.raiseDate} firstMoment={this.state.firstMoment} lastMoment={this.state.lastMoment}/>
+          <DateTextInput raiseDate={this.raiseDate}
+          firstMoment={this.state.firstMoment}
+          lastMoment={this.state.lastMoment}/>
           {/* <div className={Styles['check-in']}>
             <div className={Styles['date-label']}> Check In </div>
             <div className={Styles['date-value']}>01/01/2021</div>

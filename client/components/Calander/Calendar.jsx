@@ -143,8 +143,9 @@ class Calendar extends React.Component {
       if (this.props.firstMoment.diff(proposed) < 0 ) {
 
         this.props.raiseDate('checkOut-book_it', proposed)
+
         /// Set the Calander visability to false
-        this.props.toggleCalanderVisable(false);
+        // this.props.toggleCalanderVisable(false);
       }
 
     /// If we have both reset both and Drop the first
@@ -178,17 +179,18 @@ class Calendar extends React.Component {
       {return <tr key={'' + i}>{row}</tr>})
 
     return (
-      <div className={Styles['cal-box']}>
-        <div>
-          <h3>{currentMounth} {currentYear}</h3>
+      <div className={Styles['cal-box-flex']}>
+        <div className={Styles['cal-box']}>
+          <div>
+            <h3>{currentMounth} {currentYear}</h3>
+          </div>
+          <table>
+            <tbody>
+              {tableHeader}
+              {tableData}
+          </tbody>
+          </table>
         </div>
-        <table>
-          <tbody>
-            {tableHeader}
-            {tableData}
-        </tbody>
-        </table>
-
       </div>
     )
   }
