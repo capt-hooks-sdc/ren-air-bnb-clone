@@ -32,7 +32,7 @@ class App extends React.Component {
         <Booking />
         </div>
         <div>
-        <LodgingDescription />
+        {/* <LodgingDescription /> */}
         </div>
 
       </div>

@@ -67,12 +67,23 @@ const SVGZoo = (props) => {
 
   }
 
-  else if (props.name === 'arrow') {
-
-    path = ''
-
-
+  else if (props.name === 'arrowdown') {
+    path = 'm16.29 4.3a1 1 0 1 1 1.41 1.42l-8 8a1 1 0 0 1 -1.41 0l-8-8a1 1 0 1 1 1.41-1.42l7.29 7.29z'
   }
+
+  else if (props.name === 'minus') {
+
+    style = {'display': 'block', 'height': '12px', 'width': '12px', 'fill': 'none', 'stroke': 'currentcolor', 'strokeWidth': '5.33333', 'overflow': 'visible'};
+
+    path = 'm2 16h28'
+  }
+
+  else if (props.name === 'plus') {
+    style = {'display': 'block', 'height': '12px', 'width': '12px', 'fill': 'none', 'stroke': 'currentcolor', 'strokeWidth': '5.33333', 'overflow': 'visible'};
+
+    path = 'm2 16h28'
+  }
+
 
   return (
   <svg

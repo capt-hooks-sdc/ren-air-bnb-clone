@@ -1,219 +1,414 @@
-#bookingHeader {
-  align-items: baseline;
-  box-sizing: border-box;
-  color: rgb(34, 34, 34);
-  display: flex;
-  flex-direction: row;
+.BookingContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(20px, auto);
+  grid-auto-columns: minmax(190px, auto);
+  grid-gap: 1em;
+  font-family: "Roboto", sans-serif;
+  display: block;
   font-size: 16px;
-  font-weight: 400;
-  justify-content: space-between;
   line-height: 20px;
-  text-size-adjust: 100%;
+  box-sizing: border-box;
+  padding: 0px 24px 0px 24px;
 }
 
-#bookingHeaderPrice {
-  align-items: flex-start;
-  box-sizing: border-box;
+.BookingContainer > div {
+  /* border: #333 1px solid; */
+  padding: 1em 0em 1em 0em;
+}
+
+.booking-header {
+  grid-column: 1 / span 2;
+}
+
+.header-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+}
+
+.cost-box {
+  grid-column: 1 / span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: start;
+}
+
+.old-cost {
+  grid-column: 1 / span 1;
+  justify-items: start;
+  font-weight: bold;
+  padding-right: 4px;
+  text-decoration-line: line-through;
+  font-size: 22px;
+  line-height: 26px;
+  color: rgb(113, 113, 113);
+}
+
+.new-cost {
+  grid-column: 2 / span 1;
+  font-size: 22px;
+  line-height: 26px;
   color: rgb(34, 34, 34);
+}
+
+.new-cost-label {
+  grid-column: 3 / span 1;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.review {
+  grid-column: 2 / span 1;
+}
+
+/* ----------------------------------- */
+/* Reservation Details CSS  */
+/* ----------------------------------- */
+
+.res-detail-input {
+  grid-column: 1 / span 2;
+  display: grid;
+  border-color: rgb(176, 176, 176);
+  border-radius: 8px 8px 8px 8px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.res-detail-input > div {
+  padding: 0em 1em 0em 1em;
+}
+
+.date-input {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+  grid-auto-columns: minmax(82px, auto);
+  margin-bottom: 1em;
+}
+
+.hidden-calander-container {
+  grid-column: 2 / span 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hidden-calander-div {
+  z-index: 1;
+  width: 561px;
+  min-height: 460px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+  margin: -1em -1em -1em -1em;
+  color: black;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-gap: 1em;
+  display: none;
+}
+
+.hidden-date-input {
+  border-color: rgb(176, 176, 176);
+  border-radius: 8px 8px 8px 8px;
+  border-style: solid;
+  border-width: 1px;
+  grid-column: 2 / span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+  grid-auto-columns: minmax(82px, auto);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 1em;
+}
+
+.hidden-nights-sum {
+  grid-column: 1 / span 1;
   display: flex;
   flex-direction: column;
-  font-family: "Montserrat", sans-serif;
+  justify-items: flex-start;
+  padding: 1em;
+}
+
+.number-nights {
   font-size: 22px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 20px;
-  margin-bottom: 24px;
-  text-size-adjust: 100%;
+  font-weight: bold;
 }
 
-#resInputContainer {
-  box-sizing: border-box;
-  color: resInputContainer;
-  display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  margin-bottom: 16px;
-  text-size-adjust: 100%;
+.dates-of-nights {
+  color: rgb(113, 113, 113);
+  font-size: 14px;
+  line-height: 18px;
 }
 
-#resInput {
-  box-sizing: border-box;
-  display: block;
-  position: relative;
-  border-radius: 8px;
-  color: rgb(34, 34, 34);
-  line-height: 20px;
-}
-
-/* Inside resInput */
-
-#DateInputsBoxFlex {
+.hidden-close-button {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
   display: flex;
-  line-height: 20px;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1em;
 }
 
-#DateInputsBoxInner {
-  position: relative;
-  display: flex;
-  width: 100%;
-  margin: 0px;
-  border: none transparent;
-  color: rgb(34, 34, 34);
-  background-color: transparent;
-  border-radius: 0px;
-  box-shadow: none;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  outline: 0px;
-}
-
-#DateInputsBoxInnerAfterBoarder {
-  inset: 0px 0px -1px;
-  border-radius: 8px 8px 0px 0px;
-  border-color: rgb(176, 176, 176);
-  border-width: 1px;
-  z-index: 0;
-  position: absolute !important;
-  pointer-events: none !important;
-  border-style: solid !important;
-  display: block;
-}
-
-#StartDateBox {
-  position: relative;
-  flex: 1 1 0%;
-  padding: 0;
-  width: 100%;
-  overflow: hidden;
-  color: green;
-}
-
-#EndDateBox {
-  position: relative;
-  flex: 1 1 0%;
-  padding: 0;
-  width: 100%;
-  overflow: hidden;
-  border-left: 1px solid rgb(176, 176, 176);
-  color: red;
-}
-
-#GuestNumBoxFlex {
-  display: flex;
-  box-sizing: border-box;
-}
-
-#GuestNumBoxBorderTop {
-  background: none;
-  border-radius: 0px 0px 8px 8px;
-  inset: 0px 0px -1px;
-  position: absolute;
-  pointer-events: none;
-  box-sizing: border-box;
-  display: block;
-  border-color: rgb(176, 176, 176);
-}
-
-#GuestNumBox {
-  position: relative;
-  display: flex;
-  width: 100%;
-  margin: 0px;
-  border: none transparent;
-  color: rgb(34, 34, 34);
-  background-color: transparent;
-  border-radius: 0px;
-  box-shadow: none;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  outline: 0px;
-}
-
-#GuestNumBoxBorderUnder {
-  inset: 0px 0px -1px;
-  border-radius: 0px 0px 8px 8px;
-  border-color: rgb(176, 176, 176);
-  border-width: 1px;
-  z-index: 0;
-  position: absolute;
-  pointer-events: none;
-  border-style: solid;
-}
-
-/* Reservation Button  */
-
-#reserverButtonBox {
-  flex-shrink: 0;
-  box-sizing: border-box;
-}
-
-#reserveButton {
+.clear-dates {
   cursor: pointer;
-  display: inline-block;
-  margin: 0px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  touch-action: manipulation;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 600;
-  border-radius: 8px;
-  outline: none;
-  padding: 14px 24px;
-  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
-    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  background: rgb(247, 247, 247);
+  color: rgb(0, 0, 0);
   border: none;
-}
-
-#reserveButtonSpan1 {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-#reserveButtonSpan2 {
-  background-image: var(
-    --dls19-brand-gradient-radial,
-    radial-gradient(
-      circle at center,
-      #ff385c 0%,
-      #e61e4d 27.5%,
-      #e31c5f 40%,
-      #d70466 57.5%,
-      #bd1e59 75%,
-      #bd1e59 100%
-    )
-  );
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-width: 200px;
-  background-size: 200% 200%;
-  opacity: 0;
-  transition: opacity 1.25s ease 0s;
-  text-align: center !important;
-  color: rgb(255, 255, 255);
-}
-#reserveButtonSpan3 {
-  display: block;
-  position: relative;
-  pointer-events: none;
-  cursor: pointer;
   text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
+  padding: 8px;
+}
+
+.close-button {
+  cursor: pointer;
+  background: rgb(34, 34, 34);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
+  padding: 8px;
+
+  text-align: center;
+
+  border-radius: 10px;
+}
+
+.date-value {
+  font-size: 14px;
+}
+
+.check-in {
+  grid-column: 1 / span 1;
+}
+
+.check-out {
+  grid-column: 2 / span 1;
+}
+
+/* ----------------------------------- */
+/* Guest Info CSS  */
+/* ----------------------------------- */
+
+.guests {
+  grid-column: 1 / span 2;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.guests-psudo-boarder {
+  grid-column: 1 / span 2;
+  border-color: rgb(176, 176, 176);
+  border-radius: 0px 0px 0px 8px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.guests-input {
+  display: grid;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.guests-value {
+  font-size: 14px;
+}
+
+/* ----------------------------------- */
+/* Hidden Guest Div  */
+/* ----------------------------------- */
+
+.hidden-guest-containter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hidden-guest-div {
+  z-index: 1;
+  width: 300px;
+  min-height: 350px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+  margin: -1em -1em -1em -1em;
+  color: black;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+  padding: 0em 0em 0em 0em;
+
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.hidden-guest-div > div {
+  padding: 0em 1em 1em 1em;
+}
+
+.guest-option {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.guest-label {
   font-size: 16px;
   line-height: 20px;
-  font-weight: 600px;
-  color: rgb(255, 255, 255);
+  padding-bottom: 4px;
+  font-weight: 600;
+}
+
+.guest-desc {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.guest-type-change {
+  grid-column: 2 / span 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.guest-btn {
+  cursor: pointer;
+  border-color: rgb(176, 176, 176);
+  color: rgb(113, 113, 113);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guest-type-num {
+  margin: 1em;
+}
+
+/* ----------------------------------- */
+/* Reservation Button Info CSS  */
+/* ----------------------------------- */
+
+.reservation-button {
+  grid-column: 1 / span 2;
+  justify-self: center;
+}
+
+.res-button {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+
+  background: #d70466;
+
+  border-radius: 10px;
+  padding: 8px;
+
+  cursor: pointer;
+}
+
+.res-button h3 {
+  font-size: 16px;
+  line-height: 40px;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: fff;
+}
+
+.res-button:hover {
+  background: #b30355;
+}
+
+.disclaimer {
+  grid-column: 1 / span 2;
+}
+
+/* ----------------------------------- */
+/* Disclaimer Details CSS  */
+/* ----------------------------------- */
+.disclaimer {
+  margin-top: 8px;
+  justify-self: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+/* ----------------------------------- */
+/* Line Item CSS  */
+/* ----------------------------------- */
+.cost-breakdown {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: start;
+}
+
+.line-item {
+  text-decoration: underline;
+}
+
+/* ----------------------------------- */
+/* Total  CSS  */
+/* ----------------------------------- */
+
+.total {
+  grid-column: 1 / span 2;
+}
+
+.total-psudo-boarder {
+  grid-column: 1 / span 2;
+  border-color: rgb(176, 176, 176);
+  border-radius: 0px 0px 0px 8px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.total-box {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-items: start;
+  font-weight: bold;
+}
+
+.total-label {
+  grid-column: 1 / span 1;
+}
+
+.total-amount {
+  grid-column: 2 / span 1;
 }

@@ -5,6 +5,9 @@ import DateTextInput from './Calander/DateTextInput.jsx';
 
 import GuestPanel from './Guests/GuestPanel.jsx';
 
+import SVGZoo from './SVGZoo.jsx';
+
+
 import Styles from './topStyles/Booking.module.css';
 
 import moment from 'moment'
@@ -118,68 +121,204 @@ class Booking extends React.Component {
     }
 
     return(
-      <div id="booking-container">
-        {/* _13vog1a */}
-        <div id={Styles.bookingHeader}>
-        {/* _xqcexm */}
-          <div id={Styles.bookingHeaderPrice}> $68 </div>
-          {/* _krjbj */}
-          <span>Booking 68$</span>
+
+      <div className={Styles["BookingContainer"]}>
+
+        {/* Header  */}
+      <div className={Styles['booking-header']}>
+        <div className={Styles['header-box']}>
+          <div className={Styles['cost-box']}>
+            <div className={Styles['old-cost']}>$83</div>
+            <div className={Styles['new-cost']}>$69</div>
+            <div className={Styles['new-cost-label']}>/night</div>
+          </div>
+          <div className={Styles['review']}>4.88</div>
         </div>
+      </div>
 
-        {/* _p03egf */}
-        <div id={Styles.resInputContainer}>
-          {/* _e296pg */}
-          <div id={Styles.resInput}>
+      {/* <!-- Reservation Input --> */}
+      <div className={Styles['res-detail-input']}>
+        <div className={Styles['date-input']}>
 
-            <div id={Styles.DateInputsBoxFlex}>
-              <div id={Styles.DateInputsBoxInner}>
-                <div id={Styles.StartDateBox}>
-                  {/* <DateTextInput type="checkIn-book_it" onSubmit={this.handleTextInput} value={this.state.firstTextValue} toggleCalanderVisable={this.toggleCalanderVisable}/> */}
-                  hello
+          {/* <!-- Hiddend Calander Div  --> */}
+          <div className={Styles['hidden-calander-container']}>
+            <div className={Styles['hidden-calander-div']}>
+
+              <div className={Styles['hidden-nights-sum']}>
+                <div className={Styles['number-nights']}>5 nights</div>
+                <div className={Styles['dates-of-nights']}>Apr 28, 2021 - May 3, 2021</div>
+              </div>
+
+              <div className={Styles['hidden-date-input']}>
+                <div className={Styles['check-in']}>
+                  <div className={Styles['date-label']}> Check In </div>
+                  <div className={Styles['date-value']}>01/01/2021</div>
                 </div>
 
-                <div id={Styles.EndDateBox}>
-                  world
-                {/* <DateTextInput type="checkOut-book_it" onSubmit={this.handleTextInput} value={this.state.lastTextValue} toggleCalanderVisable={this.toggleCalanderVisable}/> */}
+
+                <div className={Styles['check-out']}>
+                  <div className={Styles['date-label']}>Check Out</div>
+                  <div className={Styles['date-value']}>01/30/2021</div>
                 </div>
+              </div>
+
+              <div className={Styles["hidden-close-button"]}>
+                <button className={Styles["clear-dates"]}>Clear Dates</button>
+                <button className={Styles["close-button"]}>Close</button>
+              </div>
 
               </div>
-              <div id={Styles.DateInputsBoxInnerAfterBoarder}></div>
 
-            </div>
+          </div>
+          {/* <!-- End Hiddend Calander Div  --> */}
 
-            {/* {calanderDiv} */}
-
-            <div id={Styles.GuestNumBoxFlex}>
-            <div id={Styles.GuestNumBoxBorderTop}></div>
-              <div id={Styles.GuestNumBox}>
-                Guests: {this.state.totalGuests}
-                {/* <GuestPanel incGuests={this.incGuests} Adults={this.state.Adults} Children={this.state.Children} Infants={this.state.Infants}/> */}
-              </div>
-              <div id={Styles.GuestNumBoxBorderUnder}></div>
-            </div>
-            </div>
+          <div className={Styles['check-in']}>
+            <div className={Styles['date-label']}> Check In </div>
+            <div className={Styles['date-value']}>01/01/2021</div>
+          </div>
 
 
-            {/* End Reservation Details Input */}
-            <div id={Styles.reserverButtonBox}>
-              <button id={Styles.reserveButton}>
-                <span id={Styles.reserveButtonSpan1}>
-                  <span id={Styles.reserveButtonSpan2}>
-                  </span>
-                </span>
-                <span id={Styles.reserveButtonSpan3}>Reserve </span>
-              </button>
-            </div>
-
-
-            {/* Reservation */}
-
-
+          <div className={Styles['check-out']}>
+            <div className={Styles['date-label']}>Check Out</div>
+            <div className={Styles['date-value']}>01/30/2021</div>
+          </div>
 
 
         </div>
+
+        {/* // <!-- Guests Selection  --> */}
+
+        <div className={Styles['guests-psudo-boarder']}></div>
+        <div className={Styles['guests']}>
+
+          <div>
+          <div className={Styles['guests-label']}>Guests</div>
+          <div className={Styles['guests-value']}>2 guests</div>
+          </div>
+
+          <div className={Styles['select-guests']}>
+            <SVGZoo name='arrowdown'/>
+          </div>
+
+        </div>
+    </div>
+
+    {/* <!-- Hidden Guests Selection  --> */}
+    <span className={Styles['hidden-guest-containter']}>
+      <div className={Styles['hidden-guest-div']}>
+
+        <div className={Styles['guest-option']}>
+          <div>
+            <div className={Styles['guest-label']}>Adults</div>
+            <div className={Styles['guest-desc']}>like an old person</div>
+          </div>
+
+
+          <div className={Styles['guest-type-change']}>
+            <span className={Styles['guest-btn']}>
+              <SVGZoo name='minus' />
+            </span>
+
+            <div className={Styles['guest-type-num']}>0</div>
+
+            <div className={Styles['guest-btn']}>
+            <SVGZoo name='plus' />
+            </div>
+          </div>
+
+        </div>
+
+
+        <div className={Styles['guest-option']}>
+          <div>
+            <div className={Styles['guest-label']}>Children</div>
+            <div className={Styles['guest-desc']}>Ages 2-12</div>
+          </div>
+
+
+          <div className={Styles['guest-type-change']}>
+            <span className={Styles['guest-btn']}>
+            <SVGZoo name='minus' />
+            </span>
+
+            <div className={Styles['guest-type-num']}>0</div>
+
+            <div className={Styles['guest-btn']}>
+              <SVGZoo name='plus' />
+            </div>
+          </div>
+
+        </div>
+
+
+        <div className={Styles['guest-option']}>
+          <div>
+            <div className={Styles['guest-label']}>Infants</div>
+            <div className={Styles['guest-desc']}>Under 2</div>
+          </div>
+
+
+          <div className={Styles['guest-type-change']}>
+            <span className={Styles['guest-btn']}>
+              <SVGZoo name='minus' />
+            </span>
+
+            <div className={Styles['guest-type-num']}>0</div>
+
+            <div className={Styles['guest-btn']}>
+              <SVGZoo name='plus' />
+            </div>
+          </div>
+
+        </div>
+
+        <div className={Styles['disclaimer']}>
+          2 guests maximum. Infants don’t count toward the number of guests.
+        </div>
+
+        <div></div>
+        <div className={Styles["hidden-close-button"]}>
+          <button className={Styles["close-button"]}>Close</button>
+        </div>
+
+
+      </div>
+    </span>
+
+      {/* End Of Hidden Guest  */}
+
+    <div className={Styles['reservation-button']}>
+        <div className={Styles["res-button"]}>
+          <h3>Reserve</h3>
+        </div>
+        <div className={Styles['disclaimer']}>
+          You Wont be Charged Yet
+        </div>
+    </div>
+
+
+      {/* Cost Breakdown  */}
+    <div className={Styles['cost-breakdown']}>
+      <div className={Styles['line-item']}>$69 x 5 nights</div>
+      <div>$345</div>
+      <div className={Styles['line-item']}>Cleaning fee</div>
+      <div>$30</div>
+      <div className={Styles['line-item']}>Service fee</div>
+      <div>$53</div>
+      <div className={Styles['line-item']}>Taxes and Fees</div>
+      <div>$64</div>
+    </div>
+
+    <div className={Styles['total']}>
+        <div className={Styles['total-psudo-boarder']}></div>
+        <div className={Styles['total-box']}>
+          <div className={Styles['total-label']}>Total</div>
+          <div className={Styles['total-amount']}>$492</div>
+        </div>
+      </div>
+
+
+
       </div>)
   }
 }
