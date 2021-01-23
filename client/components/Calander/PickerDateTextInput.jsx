@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import moment from 'moment'
+
 import Styles from './styles/PickerDateTextInput.module.css';
 
 
@@ -27,7 +29,10 @@ class PickerDateTextInput extends React.Component {
 
     handleSubmit(event) {
       event.preventDefault();
-      this.props.onSubmit(this.state.type, this.state.value);
+      var dateMoment = new Date(this.state.value);
+      dateMoment = moment(dateMoment);
+
+      this.props.onSubmit(this.state.type, dateMoment);
     }
 
 

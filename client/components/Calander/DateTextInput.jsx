@@ -58,13 +58,13 @@ class DateTextInput extends React.Component {
 
           <div className={Styles['check-in']} onClick={this.props.toggleCalanderVisable}>
             <div className={Styles['date-label']}> Check In </div>
-            <div className={Styles['date-value']}>01/01/2021</div>
+            <div className={Styles['date-value']}>{this.props.firstMoment ? this.props.firstMoment.format('MM/DD/YY') : 'MM/DD/YY'}</div>
           </div>
 
 
           <div className={Styles['check-out']} onClick={this.props.toggleCalanderVisable}>
             <div className={Styles['date-label']}>Check Out</div>
-            <div className={Styles['date-value']}>01/30/2021</div>
+            <div className={Styles['date-value']}>{this.props.lastMoment ? this.props.lastMoment.format('MM/DD/YY') : 'MM/DD/YY'}</div>
           </div>
         </div>
         )

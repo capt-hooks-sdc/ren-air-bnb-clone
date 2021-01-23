@@ -28,12 +28,14 @@ class Booking extends React.Component {
       Adults: 0,
       Children: 0,
       Infants: 0,
-      calanderVisable: false
+      calanderVisable: false,
+      guestVisable: false
     }
 
     this.handleTextInput = this.handleTextInput.bind(this);
     this.raiseDate = this.raiseDate.bind(this);
     this.toggleCalanderVisable = this.toggleCalanderVisable.bind(this);
+    this.toggleGuestsVisable = this.toggleGuestsVisable.bind(this);
     this.incGuests = this.incGuests.bind(this);
   }
 
@@ -86,6 +88,13 @@ class Booking extends React.Component {
     // debugger;
     this.setState({
       calanderVisable: visible
+    })
+  }
+
+  toggleGuestsVisable (visible) {
+    console.log('hello')
+    this.setState({
+      guestVisable: visible
     })
   }
 
@@ -174,40 +183,30 @@ class Booking extends React.Component {
           lastMoment={this.state.lastMoment}
           calanderVisable={this.state.calanderVisable}
           toggleCalanderVisable={this.toggleCalanderVisable}/>
-          {/* <div className={Styles['check-in']}>
-            <div className={Styles['date-label']}> Check In </div>
-            <div className={Styles['date-value']}>01/01/2021</div>
-          </div>
-
-
-          <div className={Styles['check-out']}>
-            <div className={Styles['date-label']}>Check Out</div>
-            <div className={Styles['date-value']}>01/30/2021</div>
-          </div> */}
-
-
 
         </div>
 
         {/* // <!-- Guests Selection  --> */}
 
         <div className={Styles['guests-psudo-boarder']}></div>
-        <div className={Styles['guests']}>
+        <div className={Styles['guests']} onClick={() => {this.state.guestVisable ? this.toggleGuestsVisable(false) : this.toggleGuestsVisable(true)}} >
 
           <div>
           <div className={Styles['guests-label']}>Guests</div>
           <div className={Styles['guests-value']}>2 guests</div>
           </div>
 
-          <div className={Styles['select-guests']}>
+          <div className={Styles['select-guests']} >
             <SVGZoo name='arrowdown'/>
           </div>
 
         </div>
     </div>
 
-    {/* <!-- Hidden Guests Selection  --> */}
-    <span className={Styles['hidden-guest-containter']}>
+
+    <GuestPanel guestVisable={this.state.guestVisable}/>
+
+    {/* <span className={Styles['hidden-guest-containter']}>
       <div className={Styles['hidden-guest-div']}>
 
         <div className={Styles['guest-option']}>
@@ -286,9 +285,10 @@ class Booking extends React.Component {
 
 
       </div>
-    </span>
+    </span> */}
 
-      {/* End Of Hidden Guest  */}
+
+
 
     <div className={Styles['reservation-button']}>
         <div className={Styles["res-button"]}>

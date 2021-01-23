@@ -101,7 +101,7 @@ componentWillMount () {
 
         <div className={Styles["hidden-close-button"]}>
           <button className={Styles["clear-dates"]}>Clear Dates</button>
-          <button className={Styles["close-button"]}>Close</button>
+          <button className={Styles["close-button"]} onClick={() => {this.props.toggleCalanderVisable(false)}}>Close</button>
         </div>
 
         </div>
