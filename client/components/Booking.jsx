@@ -136,9 +136,14 @@ class Booking extends React.Component {
         </div>
       </div>
 
+
+
       {/* <!-- Reservation Input --> */}
       <div className={Styles['res-detail-input']}>
+
+
         <div className={Styles['date-input']}>
+
 
           {/* <!-- Hiddend Calander Div  --> */}
           <div className={Styles['hidden-calander-container']}>
@@ -172,7 +177,10 @@ class Booking extends React.Component {
           </div>
           {/* <!-- End Hiddend Calander Div  --> */}
 
-          <div className={Styles['check-in']}>
+
+
+          <DateTextInput />
+          {/* <div className={Styles['check-in']}>
             <div className={Styles['date-label']}> Check In </div>
             <div className={Styles['date-value']}>01/01/2021</div>
           </div>
@@ -181,7 +189,8 @@ class Booking extends React.Component {
           <div className={Styles['check-out']}>
             <div className={Styles['date-label']}>Check Out</div>
             <div className={Styles['date-value']}>01/30/2021</div>
-          </div>
+          </div> */}
+
 
 
         </div>

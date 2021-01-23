@@ -79,7 +79,7 @@
   padding: 0em 1em 0em 1em;
 }
 
-.date-input {
+/* .date-input {
   grid-column: 1 / span 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -89,7 +89,7 @@
   text-transform: uppercase;
   grid-auto-columns: minmax(82px, auto);
   margin-bottom: 1em;
-}
+} */
 
 .hidden-calander-container {
   grid-column: 2 / span 1;
@@ -188,17 +188,17 @@
   border-radius: 10px;
 }
 
-.date-value {
+/* .date-value {
   font-size: 14px;
-}
+} */
 
-.check-in {
+/* .check-in {
   grid-column: 1 / span 1;
 }
 
 .check-out {
   grid-column: 2 / span 1;
-}
+} */
 
 /* ----------------------------------- */
 /* Guest Info CSS  */
