@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import DateTextInput from './Calander/DateTextInput.jsx';
 
 import GuestPanel from './Guests/GuestPanel.jsx';
@@ -11,6 +10,8 @@ import SVGZoo from './SVGZoo.jsx';
 import Styles from './topStyles/Booking.module.css';
 
 import moment from 'moment'
+
+
 
 
 class Booking extends React.Component {
@@ -29,7 +30,8 @@ class Booking extends React.Component {
       Children: 0,
       Infants: 0,
       calanderVisable: false,
-      guestVisable: false
+      guestVisable: false,
+
     }
 
     this.handleTextInput = this.handleTextInput.bind(this);
@@ -37,7 +39,15 @@ class Booking extends React.Component {
     this.toggleCalanderVisable = this.toggleCalanderVisable.bind(this);
     this.toggleGuestsVisable = this.toggleGuestsVisable.bind(this);
     this.incGuests = this.incGuests.bind(this);
+    this.computeLineItems = this.computeLineItems.bind(this);
+
+
   }
+
+
+
+
+
 
   handleTextInput (type, date) {
     console.log(`${type} ${date}`);
@@ -92,7 +102,6 @@ class Booking extends React.Component {
   }
 
   toggleGuestsVisable (visible) {
-    console.log('hello')
     this.setState({
       guestVisable: visible
     })
@@ -115,9 +124,21 @@ class Booking extends React.Component {
 
   }
 
+  computeLineItems () {
+    var nights = this.state.firstMoment && this.state.lastMoment ? this.state.lastMoment.diff(this.state.firstMoment, 'days') : 0;
+    var total = this.props.price * nights;
+
+
+    var finalTotal = total + this.props.cleaningFee + this.props.serviceFee + this.props.taxesFees;
+
+    return {nights, total, finalTotal}
+  }
+
 
 
   render () {
+
+    var lineItems = this.computeLineItems();
 
     return(
 
@@ -127,8 +148,8 @@ class Booking extends React.Component {
       <div className={Styles['booking-header']}>
         <div className={Styles['header-box']}>
           <div className={Styles['cost-box']}>
-            <div className={Styles['old-cost']}>$83</div>
-            <div className={Styles['new-cost']}>$69</div>
+            <div className={Styles['old-cost']}>${this.props.oldPrice}</div>
+            <div className={Styles['new-cost']}>${this.props.price}</div>
             <div className={Styles['new-cost-label']}>/night</div>
           </div>
           <div className={Styles['review']}>4.88</div>
@@ -212,89 +233,6 @@ class Booking extends React.Component {
     toggleGuestsVisable={this.toggleGuestsVisable}
     />
 
-    {/* <span className={Styles['hidden-guest-containter']}>
-      <div className={Styles['hidden-guest-div']}>
-
-        <div className={Styles['guest-option']}>
-          <div>
-            <div className={Styles['guest-label']}>Adults</div>
-            <div className={Styles['guest-desc']}>like an old person</div>
-          </div>
-
-
-          <div className={Styles['guest-type-change']}>
-            <span className={Styles['guest-btn']}>
-              <SVGZoo name='minus' />
-            </span>
-
-            <div className={Styles['guest-type-num']}>0</div>
-
-            <div className={Styles['guest-btn']}>
-            <SVGZoo name='plus' />
-            </div>
-          </div>
-
-        </div>
-
-
-        <div className={Styles['guest-option']}>
-          <div>
-            <div className={Styles['guest-label']}>Children</div>
-            <div className={Styles['guest-desc']}>Ages 2-12</div>
-          </div>
-
-
-          <div className={Styles['guest-type-change']}>
-            <span className={Styles['guest-btn']}>
-            <SVGZoo name='minus' />
-            </span>
-
-            <div className={Styles['guest-type-num']}>0</div>
-
-            <div className={Styles['guest-btn']}>
-              <SVGZoo name='plus' />
-            </div>
-          </div>
-
-        </div>
-
-
-        <div className={Styles['guest-option']}>
-          <div>
-            <div className={Styles['guest-label']}>Infants</div>
-            <div className={Styles['guest-desc']}>Under 2</div>
-          </div>
-
-
-          <div className={Styles['guest-type-change']}>
-            <span className={Styles['guest-btn']}>
-              <SVGZoo name='minus' />
-            </span>
-
-            <div className={Styles['guest-type-num']}>0</div>
-
-            <div className={Styles['guest-btn']}>
-              <SVGZoo name='plus' />
-            </div>
-          </div>
-
-        </div>
-
-        <div className={Styles['disclaimer']}>
-          2 guests maximum. Infants don’t count toward the number of guests.
-        </div>
-
-        <div></div>
-        <div className={Styles["hidden-close-button"]}>
-          <button className={Styles["close-button"]}>Close</button>
-        </div>
-
-
-      </div>
-    </span> */}
-
-
-
 
     <div className={Styles['reservation-button']}>
         <div className={Styles["res-button"]}>
@@ -308,21 +246,21 @@ class Booking extends React.Component {
 
       {/* Cost Breakdown  */}
     <div className={Styles['cost-breakdown']}>
-      <div className={Styles['line-item']}>$69 x 5 nights</div>
-      <div>$345</div>
+      <div className={Styles['line-item']}>${this.props.price} x {lineItems.nights} nights</div>
+      <div>${lineItems.total}</div>
       <div className={Styles['line-item']}>Cleaning fee</div>
-      <div>$30</div>
+      <div>${this.props.cleaningFee}</div>
       <div className={Styles['line-item']}>Service fee</div>
-      <div>$53</div>
+      <div>${this.props.serviceFee}</div>
       <div className={Styles['line-item']}>Taxes and Fees</div>
-      <div>$64</div>
+      <div>${this.props.taxesFees}</div>
     </div>
 
     <div className={Styles['total']}>
         <div className={Styles['total-psudo-boarder']}></div>
         <div className={Styles['total-box']}>
           <div className={Styles['total-label']}>Total</div>
-          <div className={Styles['total-amount']}>$492</div>
+          <div className={Styles['total-amount']}>${lineItems.finalTotal}</div>
         </div>
       </div>
 

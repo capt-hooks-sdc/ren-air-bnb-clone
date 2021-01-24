@@ -17,6 +17,7 @@ class CalenderPicker extends React.Component {
     }
 
     this.shiftMonths = this.shiftMonths.bind(this);
+    this.calculateDetails = this.calculateDetails.bind(this);
 }
 
 componentWillMount () {
@@ -47,18 +48,39 @@ componentWillMount () {
 
   }
 
+  calculateDetails () {
+
+    var nights = 0;
+    var hrCheckIn = '';
+    var hrCheckOut = '';
+
+    if (this.state.firstMoment && this.state.lastMoment) {
+      var nights = this.state.lastMoment.diff(this.state.firstMoment, 'days')
+      var hrCheckIn = this.state.firstMoment.format("MMM Do YY");
+      var hrCheckOut = this.state.lastMoment.format("MMM Do YY");
+
+    }
+
+    return {nights, hrCheckIn, hrCheckOut}
+  }
+
   render() {
     console.log('In Render');
     console.log(this.firstMoment)
     console.log(this.LastMoment)
+
+
+    let staySummary = this.calculateDetails();
+
+
     return(
 
       <div className={Styles['hidden-calander-container']} >
       <div className={Styles['hidden-calander-div']}>
 
         <div className={Styles['hidden-nights-sum']}>
-          <div className={Styles['number-nights']}>5 nights</div>
-          <div className={Styles['dates-of-nights']}>Apr 28, 2021 - May 3, 2021</div>
+          <div className={Styles['number-nights']}>{staySummary.nights} nights</div>
+          <div className={Styles['dates-of-nights']}>{staySummary.hrCheckIn} - {staySummary.hrCheckOut}</div>
         </div>
 
         <div className={Styles['hidden-date-input']}>
