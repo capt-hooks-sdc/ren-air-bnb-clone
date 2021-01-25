@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch"
+    "start": "webpack --watch",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +14,19 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
+    "coveralls": "^3.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.1",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.1",
     "webpack": "^5.13.0",
     "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.2"
@@ -22,5 +35,13 @@
     "lodash": "^4.17.20",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./src/setupTests.js"
+    ]
   }
 }

@@ -1,0 +1,157 @@
+#page-layout {
+  display: grid;
+  grid-template-columns: [left-edge] 60% [centre] 40% [right-edge] ;
+  grid-template-rows: 100%;
+}
+
+#lodging-dis-zone {
+  grid-column: left-edge / centre;
+  grid-row: 1 / span 1;
+}
+
+
+.right-panel {
+  grid-column: centre / right-edge;
+  grid-row: 1 / span 1;
+}
+
+#booking-zone {
+  border: 1px solid rgb(221, 221, 221); border-radius: 12px; padding: 24px; box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;;
+  box-sizing: border-box;
+  padding: 24px;
+
+}
+
+/* Booking Container CSS */
+#booking-container {
+  display: grid;
+  grid-template-columns: [left-edge] 50% [centre] 50% [right-edge] ;
+  grid-template-rows: [top-edge] 20% [under-header] 20% [under-dates] 20% [under-guests] 20% [under-reserver] 20% [bottom-edge] ;
+}
+
+
+#item-booking-header {
+  grid-column: left-edge /  right-edge;
+  grid-row: top-edge / under-header;
+  color: purple;
+  justify-self: center;
+}
+
+.blooking-label {
+  color: rgb(34, 34, 34);
+  display: block;
+  font-family: Circular;
+  font-size: 10px;
+  left: 12px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  text-size-adjust: 100%;
+  text-transform: uppercase;
+  top: 12px;
+}
+
+#item-start-date {
+  grid-column: left-edge /  centre;
+  grid-row: under-header / under-dates;
+  justify-self: center;
+  position:relative;
+  z-index:1;
+  width: 75%;
+}
+
+
+#item-end-date {
+  grid-column: centre /  right-edge;
+  grid-row: under-header / under-dates;
+  justify-self: center;
+  position:relative;
+  z-index:1
+}
+
+.text-input {
+
+}
+
+#calander-picker {
+  position: absolute;
+  background-attachment: scroll;
+  right: 0px;
+  top: 220px;
+  z-index: 0;
+  background-color: rgb(248, 249, 252);
+  border-color: black;
+  border-radius:16px;
+
+}
+
+/* In Calander Picker  */
+#calander-picker-container {
+  display: grid;
+  grid-template-columns: [left] 50% [centre] 50% [right];
+  grid-template-rows: [top] 20% [under-input] 80% [bottom]
+}
+
+#date-text-spacer {
+  height: 10px;
+  grid-column: left / span 2;
+  grid-row: top / under-input ;
+}
+
+.calender-prev {
+  grid-column: left / centre;
+  grid-row: under-input / bottom;
+}
+
+.calender-post {
+  grid-column: centre / right;
+  grid-row: under-input / bottom;
+}
+
+/* End Calander Picker  */
+
+#guest-box {
+  grid-column: left-edge / span 2;
+  grid-row: under-reserver / span 1;
+  color: blue
+}
+
+
+
+
+
+
+
+/* Calander CSS */
+.cal-day.selected {
+  background-color: rgb(34, 34, 34);
+  color: white;
+}
+
+.cal-day.bwselected {
+  background-color: rgb(225, 237, 241);
+}
+
+.cal-box {
+  color: rgb(34, 34, 34) !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+};
+
+

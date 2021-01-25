@@ -1,0 +1,18 @@
+/* Calander CSS */
+.calday {
+  text-align: center;
+  padding: 4px;
+}
+
+.selected {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.bwselected {
+  background-color: rgb(225, 237, 241);
+}
