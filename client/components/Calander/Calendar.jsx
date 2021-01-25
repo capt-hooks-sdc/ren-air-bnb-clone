@@ -5,6 +5,9 @@ import CalendarDay from './CalendarDay.jsx';
 
 import Styles from './styles/Calender.module.css';
 
+import SVGZoo from '../SVGZoo.jsx';
+
+
 class Calendar extends React.Component {
   constructor(props) {
     super(props)
@@ -180,10 +183,34 @@ class Calendar extends React.Component {
 
     return (
       <div className={Styles['cal-box-flex']}>
+
         <div className={Styles['cal-box']}>
-          <div>
-            <h3>{currentMounth} {currentYear}</h3>
-          </div>
+
+
+
+
+            {this.props.monthType === 'prev' &&
+            <div className={Styles['cal-header']}>
+              <div className={Styles['cal-shift']}
+              onClick={this.props.shiftMonths}>
+                <SVGZoo name={`${this.props.monthType}-month`} />
+              </div>
+              <h3>{currentMounth} {currentYear}</h3>
+            </div>
+            }
+
+            {this.props.monthType === 'post' &&
+            <div className={Styles['cal-header']}>
+              <h3>{currentMounth} {currentYear}</h3>
+
+              <div className={Styles['cal-shift']}
+              onClick={this.props.shiftMonths}>
+                <SVGZoo name={`${this.props.monthType}-month`} />
+              </div>
+            </div>
+            }
+
+
           <table>
             <tbody>
               {tableHeader}

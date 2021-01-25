@@ -1,31 +1,5 @@
 import React from 'react';
 
-// import Styles from './topStyles/LodgingDetails.module.css';
-
-
-// function SVGZoo(props) {
-//   var thisSVG;
-
-//   if (props.name === 'house'){
-//     thisSVG = (
-      //  <svg viewBox="0 0 32 32"
-      //  xmlns="http://www.w3.org/2000/svg"
-      //  aria-hidden="true"
-      //  role="presentation"
-      //  focusable="false"
-      //  style="display: block; height: 24px; width: 24px; fill: currentcolor;">
-
-
-      //    <path d="M17.954 2.781l.175.164 13.072 12.842-1.402 1.426-1.8-1.768L28 29a2 2 0 0 1-1.85 1.994L26 31H6a2 2 0 0 1-1.995-1.85L4 29V15.446l-1.8 1.767-1.4-1.426L13.856 2.958a3 3 0 0 1 4.097-.177zm-2.586 1.503l-.096.088L6 13.48 6 29l5-.001V19a2 2 0 0 1 1.85-1.995L13 17h6a2 2 0 0 1 1.995 1.85L21 19v9.999h5V13.48l-9.3-9.135a1.001 1.001 0 0 0-1.332-.06zM19 19h-6v9.999h6z"></path></svg>
-//     )
-
-//   }
-
-//   return (
-//     {thisSVG}
-//   )
-
-// }
 
 const SVGZoo = (props) => {
 
@@ -82,6 +56,22 @@ const SVGZoo = (props) => {
     style = {'display': 'block', 'height': '12px', 'width': '12px', 'fill': 'none', 'stroke': 'currentcolor', 'strokeWidth': '5.33333', 'overflow': 'visible'};
 
     path = 'm2 16h28'
+  }
+
+
+  else if (props.name === 'prev-month') {
+    let viewBox="0 0 18 18";
+    style = {'display': 'block', 'height': '18px', 'width': '18px', 'fill': 'none', 'stroke': 'currentcolor'};
+
+    path = 'm13.7 16.29a1 1 0 1 1 -1.42 1.41l-8-8a1 1 0 0 1 0-1.41l8-8a1 1 0 1 1 1.42 1.41l-7.29 7.29z'
+  }
+
+
+  else if (props.name === 'post-month') {
+    let viewBox="0 0 18 18";
+    style = {'display': 'block', 'height': '18px', 'width': '18px', 'fill': 'none', 'stroke': 'currentcolor'};
+
+    path = 'm4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z'
   }
 
 

@@ -1,8 +1,8 @@
 .BookingContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(20px, auto);
-  grid-auto-columns: minmax(190px, auto);
+  grid-auto-rows: minmax(20px, 600px);
+  grid-auto-columns: minmax(220px, auto);
   grid-gap: 1em;
   font-family: "Roboto", sans-serif;
   display: block;

@@ -3,11 +3,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 10px;
   color: rgb(34, 34, 34);
   text-transform: uppercase;
   grid-auto-columns: minmax(82px, auto);
   margin-bottom: 1em;
+  grid-gap: 1em;
 }
 
 .check-in {
@@ -16,8 +17,11 @@
 
 .check-out {
   grid-column: 2 / span 1;
+  border-left: solid 1px;
+  padding-left: 1em;
 }
 
 .date-value {
   font-size: 14px;
+  font-weight: 400;
 }

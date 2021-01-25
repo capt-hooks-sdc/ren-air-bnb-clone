@@ -14,3 +14,25 @@ table {
   margin: 0;
   padding: 0;
 }
+
+.cal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cal-shift {
+  padding: 8px 2px 2px 8px;
+  text-align: center;
+  align-self: center;
+}
+
+.cal-shift:hover {
+  /* background-color: green; */
+  background-color: rgb(225, 237, 241);
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}

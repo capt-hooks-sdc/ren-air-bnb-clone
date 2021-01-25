@@ -5,7 +5,7 @@ import PickerDateTextInput from './PickerDateTextInput.jsx';
 
 import Styles from './styles/CalenderPicker.module.css';
 
-
+import SVGZoo from '../SVGZoo.jsx';
 
 class CalenderPicker extends React.Component {
   constructor(props) {
@@ -54,10 +54,10 @@ componentWillMount () {
     var hrCheckIn = '';
     var hrCheckOut = '';
 
-    if (this.state.firstMoment && this.state.lastMoment) {
-      var nights = this.state.lastMoment.diff(this.state.firstMoment, 'days')
-      var hrCheckIn = this.state.firstMoment.format("MMM Do YY");
-      var hrCheckOut = this.state.lastMoment.format("MMM Do YY");
+    if (this.props.firstMoment && this.props.lastMoment) {
+      var nights = this.props.lastMoment.diff(this.props.firstMoment, 'days')
+      var hrCheckIn = this.props.firstMoment.format("MMM Do YY");
+      var hrCheckOut = this.props.lastMoment.format("MMM Do YY");
 
     }
 
@@ -66,8 +66,8 @@ componentWillMount () {
 
   render() {
     console.log('In Render');
-    console.log(this.firstMoment)
-    console.log(this.LastMoment)
+    console.log(this.props.firstMoment)
+    console.log(this.props.LastMoment)
 
 
     let staySummary = this.calculateDetails();
@@ -101,22 +101,32 @@ componentWillMount () {
 
 
           <div id={Styles['calender-prev']}>
-          <button onClick={() => {this.shiftMonths('left')}}>Left</button>
+          {/* <button onClick={() => {this.shiftMonths('left')}}>Left</button> */}
+
+
             <Calendar firstMoment={this.props.firstMoment}
             lastMoment={this.props.lastMoment}
             raiseDate={this.props.raiseDate}
             momObj={this.state.firstMonth}
             toggleCalanderVisable={this.props.toggleCalanderVisable}
+            shiftMonths ={() => {this.shiftMonths('left')}}
+            monthType = {'prev'}
             />
           </div>
 
           <div id={Styles['calender-post']}>
-          <button onClick={() => {this.shiftMonths('right')}}>Right</button>
+          {/* <button onClick={() => {this.shiftMonths('right')}}>Right</button> */}
+          {/* <span onClick={() => {this.shiftMonths('left')}}>
+            <SVGZoo name={'next-month'} />
+          </span> */}
+
             <Calendar firstMoment={this.props.firstMoment}
             lastMoment={this.props.lastMoment}
             raiseDate={this.props.raiseDate}
             momObj={this.state.secondMonth}
             toggleCalanderVisable={this.props.toggleCalanderVisable}
+            shiftMonths ={() => {this.shiftMonths('right')}}
+            monthType = {'post'}
             />
           </div>
 
