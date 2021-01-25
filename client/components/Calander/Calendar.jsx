@@ -90,8 +90,6 @@ class Calendar extends React.Component {
 
     // Pad the front of the list
     for (var i = 1; i < firstDayNum; i++) {
-      // thisRow.push(<CalendarDay key = {'b'+ i} day={null} month={null}
-      // clickHandler={this.handleClick}/>)
       thisRow.push(this.createCell(i, currentMounth, true));
     }
 

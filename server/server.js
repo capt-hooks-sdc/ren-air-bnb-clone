@@ -6,15 +6,14 @@ const querystring = require('querystring');
 
 const db = require('./database');
 
-
-
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
-app.use(express.static(__dirname + '/../client/public'));
+// app.use(express.static(__dirname + '/../client/public'));
+app.use('/', express.static(__dirname + '/../client/public'));
+app.use('/bundle', express.static(__dirname + '/../client/public/bundle.js'));
 
 const PORT = process.env.PORT || 3000;
 

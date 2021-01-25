@@ -7,12 +7,12 @@ import LodgingDescription from './LodgingDescription.jsx';
 import Booking from './Booking.jsx';
 
 
-import Styles from './topStyles/App.module.css';
+import Styles from './topStyles/InfoBooking.module.css';
 
 
 
 
-class App extends React.Component {
+class InfoBooking extends React.Component {
   constructor (props) {
     super(props)
 
@@ -68,7 +68,7 @@ class App extends React.Component {
         {/* Info */}
 
         <div className={Styles['info']}>
-        <LodgingDetails />
+        <LodgingDetails hostName={this.state.hostName.split(' ')[0]}/>
 
         </div>
 
@@ -94,4 +94,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default InfoBooking;

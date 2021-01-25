@@ -5,7 +5,7 @@ import Styles from './topStyles/LodgingDetails.module.css';
 import SVGZoo from './SVGZoo.jsx';
 
 
-function LodgingDetails() {
+function LodgingDetails(props) {
 
   return (
     <div className={Styles['LodgingDetailsContainer']}>
@@ -13,7 +13,7 @@ function LodgingDetails() {
       <div className={Styles['info-header']}>
 
       <div className={Styles["lodging-header"]}>
-        Entire apartment hosted by Ann
+        Entire apartment hosted by {props.hostName}
       </div>
 
       <div className={Styles["loging-breakdown"]}>

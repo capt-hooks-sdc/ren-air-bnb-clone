@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './components/App.jsx';
+import InfoBooking from './components/InfoBooking.jsx';
 
-ReactDOM.render(<App />, document.getElementById('App'));
+ReactDOM.render(<InfoBooking />, document.getElementById('InfoBooking'));

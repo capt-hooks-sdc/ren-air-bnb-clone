@@ -89,11 +89,13 @@ componentWillMount () {
 
         <PickerDateTextInput value={this.props.firstMoment }
         onSubmit={this.props.raiseDate}
-        type={'checkIn-book_it'}/>
+        type={'checkIn-book_it'}
+        handleTextInput = {this.props.handleTextInput}/>
 
         <PickerDateTextInput value={this.props.lastMoment}
         onSubmit={this.props.raiseDate}
-        type={'checkOut-book_it'}/>
+        type={'checkOut-book_it'}
+        handleTextInput = {this.props.handleTextInput}/>
 
         </div>
 
