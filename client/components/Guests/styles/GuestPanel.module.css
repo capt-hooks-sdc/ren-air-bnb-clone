@@ -5,6 +5,7 @@
 .hidden-guest-containter {
   display: flex;
   justify-content: flex-end;
+  font-weight: 400;
 }
 
 .hidden-guest-div {

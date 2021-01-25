@@ -234,6 +234,11 @@
 
 .guests-value {
   font-size: 14px;
+  font-weight: 400;
+}
+
+.guests-label {
+  font-size: 10px;
 }
 
 /* ----------------------------------- */
