@@ -24,8 +24,13 @@ class PickerDateTextInput extends React.Component {
 
     handleChange(event) {
       console.log('In Handle Change');
+
+      this.props.handleTextInput(this.state.type, event.target.value)
       this.setState({value: event.target.value});
+
+
     }
+
 
     handleSubmit(event) {
       event.preventDefault();

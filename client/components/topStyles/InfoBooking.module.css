@@ -1,7 +1,7 @@
 .infomation {
   display: grid;
   /* grid-template-columns: 1fr 2fr 1fr; */
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-gap: 1em;
   grid-auto-rows: minmax(100px, auto);
   grid-auto-columns: minmax(190px, auto);

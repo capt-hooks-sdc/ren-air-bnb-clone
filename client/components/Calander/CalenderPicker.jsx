@@ -54,10 +54,11 @@ componentWillMount () {
     var hrCheckIn = '';
     var hrCheckOut = '';
 
-    if (this.state.firstMoment && this.state.lastMoment) {
-      var nights = this.state.lastMoment.diff(this.state.firstMoment, 'days')
-      var hrCheckIn = this.state.firstMoment.format("MMM Do YY");
-      var hrCheckOut = this.state.lastMoment.format("MMM Do YY");
+
+    if (this.props.firstMoment && this.props.lastMoment) {
+      var nights = this.props.lastMoment.diff(this.props.firstMoment, 'days')
+      var hrCheckIn = this.props.firstMoment.format("MMM Do YY");
+      var hrCheckOut = this.props.lastMoment.format("MMM Do YY");
 
     }
 
@@ -66,8 +67,8 @@ componentWillMount () {
 
   render() {
     console.log('In Render');
-    console.log(this.firstMoment)
-    console.log(this.LastMoment)
+    console.log(this.props.firstMoment)
+    console.log(this.props.LastMoment)
 
 
     let staySummary = this.calculateDetails();
@@ -89,11 +90,13 @@ componentWillMount () {
 
         <PickerDateTextInput value={this.props.firstMoment }
         onSubmit={this.props.raiseDate}
-        type={'checkIn-book_it'}/>
+        type={'checkIn-book_it'}
+        handleTextInput = {this.props.handleTextInput}/>
 
         <PickerDateTextInput value={this.props.lastMoment}
         onSubmit={this.props.raiseDate}
-        type={'checkOut-book_it'}/>
+        type={'checkOut-book_it'}
+        handleTextInput = {this.props.handleTextInput}/>
 
         </div>
 

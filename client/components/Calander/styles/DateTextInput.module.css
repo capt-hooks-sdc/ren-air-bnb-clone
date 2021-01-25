@@ -21,3 +21,12 @@
 .date-value {
   font-size: 14px;
 }
+
+.date-value {
+  font-size: 14px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  padding: 5px 6px 5px 0px;
+}

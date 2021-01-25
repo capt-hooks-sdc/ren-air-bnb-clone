@@ -50,10 +50,11 @@ class Booking extends React.Component {
 
 
   handleTextInput (type, date) {
-    console.log(`${type} ${date}`);
+    console.log(`In Handle Text Input ${type} ${date}`);
+
 
     /// Test if in format of valud date
-    if (date.match(/^\d{1,2}\/\d{1,2}\/\d{4}$/)) {
+    if (date.match(/^\d{1,2}\/\d{1,2}\/\d{2}$/)) {
       console.log('It\'s Date');
 
       var date = moment(new Date(date));
@@ -88,7 +89,7 @@ class Booking extends React.Component {
       this.setState({
         lastMoment: dateDate,
         lastTextValue: dateText,
-        calanderVisable: false /// Remove the calnder from view
+        // calanderVisable: closeCalender /// Remove the calnder from view if a parameter is passed
       });
     }
 
@@ -203,7 +204,8 @@ class Booking extends React.Component {
           firstMoment={this.state.firstMoment}
           lastMoment={this.state.lastMoment}
           calanderVisable={this.state.calanderVisable}
-          toggleCalanderVisable={this.toggleCalanderVisable}/>
+          toggleCalanderVisable={this.toggleCalanderVisable}
+          handleTextInput = {this.handleTextInput}/>
 
         </div>
 

@@ -31,24 +31,14 @@ class DateTextInput extends React.Component {
       this.props.onSubmit(this.state.type, this.state.value);
     }
 
-    // openDatePicker() {
-    //   var nextState = this.state.datePickerVisable ? false : true;
-    //   this.setState({
-    //     datePickerVisable: nextState
-    //   })
-    // }
-
-
-
     render () {
       var hidden;
       if (this.props.calanderVisable) {
-        // hidden = <CalenderPicker raiseDate={this.props.raiseDate}/>
-
         hidden = (<CalenderPicker firstMoment={this.props.firstMoment}
           lastMoment={this.props.lastMoment}
           raiseDate={this.props.raiseDate}
-          toggleCalanderVisable={this.props.toggleCalanderVisable}/>)
+          toggleCalanderVisable={this.props.toggleCalanderVisable}
+          handleTextInput = {this.props.handleTextInput}/>)
       }
 
       return (
