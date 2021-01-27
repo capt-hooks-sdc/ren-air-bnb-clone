@@ -16,7 +16,7 @@ app.use(cors({ origin: process.env.PROXY_ORIGIN }));
 
 // app.use(express.static(__dirname + '/../client/public'));
 app.use('/', express.static(__dirname + '/../client/public'));
-app.use('/bundle', express.static(__dirname + '/../client/public/bundle.js'));
+app.use('/bundle', cors(), express.static(__dirname + '/../client/public/bundle.js'));
 
 const PORT = process.env.PORT || 3001;
 
@@ -60,5 +60,5 @@ app.get('/lodge', (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`Server listening on http://localhost:${PORT}`);
+  console.log(`Server listening on ${PORT}`);
 });
