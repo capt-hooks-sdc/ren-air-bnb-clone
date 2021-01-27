@@ -9,8 +9,8 @@
 SET FOREIGN_KEY_CHECKS=0;
 
 
-CREATE DATABASE IF NOT EXISTS airbnb;
-USE airbnb;
+CREATE DATABASE IF NOT EXISTS airbnbBooking;
+USE airbnbBooking;
 --
 -- Table 'lodgings'
 --

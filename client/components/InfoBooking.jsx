@@ -6,11 +6,7 @@ import LodgingDescription from './LodgingDescription.jsx';
 
 import Booking from './Booking.jsx';
 
-
 import Styles from './topStyles/InfoBooking.module.css';
-
-
-
 
 class InfoBooking extends React.Component {
   constructor (props) {
@@ -32,7 +28,7 @@ class InfoBooking extends React.Component {
 
     let config = {
       method: 'get',
-      url: 'lodge/?id=1000',
+      url: 'http://localhost:3001/lodge/?id=1000',
       headers: { }
     };
 
@@ -64,7 +60,11 @@ class InfoBooking extends React.Component {
 
   render() {
     return (
+
       <div className={Styles['infomation']}>
+        {/* Spacer  */}
+        <div className={Styles['booking-info-spacer']}></div>
+
         {/* Info */}
 
         <div className={Styles['info']}>
