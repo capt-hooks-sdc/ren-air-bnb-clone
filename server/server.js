@@ -11,7 +11,9 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(cors({ origin: 'http://localhost:8000' }));
+app.use(cors({ origin: process.env.PROXY_ORIGIN }));
+
+
 // app.use(express.static(__dirname + '/../client/public'));
 app.use('/', express.static(__dirname + '/../client/public'));
 app.use('/bundle', express.static(__dirname + '/../client/public/bundle.js'));
