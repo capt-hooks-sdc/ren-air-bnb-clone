@@ -1,12 +1,18 @@
-// import { shallow } from 'enzyme';
-// import Booking from '../componets/Booking.jsx';
+import { shallow } from 'enzyme';
+import Booking from '../componets/Booking.jsx';
 
-// const wrapper = shallow(<Booking />);
+const wrapper = shallow(<BaseButton />);
 
 
-// describe('BaseButton', () => {
-//   it('should render correctly, () => {
-//     const component = shallow(<Booking/>);
+// test('Booking Section Exisits', () => {
+//   const component = renderer.create(
+//     <Booking />
+//   );
+//   let tree = component.toJSON();
 
-//     expect(component).toMatchSnapshot();
-//   });
+//   expect(tree).toMatchSnapshot();
+
+// });
+
+
+// Reference: https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675

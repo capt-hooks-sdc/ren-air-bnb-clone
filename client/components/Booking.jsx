@@ -153,7 +153,9 @@ class Booking extends React.Component {
             <div className={Styles['new-cost']}>${this.props.price}</div>
             <div className={Styles['new-cost-label']}>/night</div>
           </div>
-          <div className={Styles['review']}>4.88</div>
+          <div className={Styles['review']}>
+          <span className={Styles['review-star']}>★ </span>
+            4.88</div>
         </div>
       </div>
 
