@@ -1,0 +1,347 @@
+.BookingContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(20px, 600px);
+  grid-auto-columns: minmax(220px, auto);
+  grid-gap: 1em;
+  font-family: "Roboto", sans-serif;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  box-sizing: border-box;
+  padding: 0px 24px 0px 24px;
+}
+
+.BookingContainer > div {
+  /* border: #333 1px solid; */
+  padding: 1em 0em 1em 0em;
+}
+
+.booking-header {
+  grid-column: 1 / span 2;
+}
+
+.header-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+}
+
+.cost-box {
+  grid-column: 1 / span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: start;
+}
+
+.old-cost {
+  grid-column: 1 / span 1;
+  justify-items: start;
+  font-weight: bold;
+  padding-right: 4px;
+  text-decoration-line: line-through;
+  font-size: 22px;
+  line-height: 26px;
+  color: rgb(113, 113, 113);
+}
+
+.new-cost {
+  grid-column: 2 / span 1;
+  font-size: 22px;
+  line-height: 26px;
+  color: rgb(34, 34, 34);
+}
+
+.new-cost-label {
+  grid-column: 3 / span 1;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.review {
+  grid-column: 2 / span 1;
+}
+
+.review-star {
+  color: rgb(255, 56, 92);
+}
+
+/* ----------------------------------- */
+/* Reservation Details CSS  */
+/* ----------------------------------- */
+
+.res-detail-input {
+  grid-column: 1 / span 2;
+  display: grid;
+  border-color: rgb(176, 176, 176);
+  border-radius: 8px 8px 8px 8px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.res-detail-input > div {
+  padding: 0em 1em 0em 1em;
+}
+
+/* .date-input {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+  grid-auto-columns: minmax(82px, auto);
+  margin-bottom: 1em;
+} */
+
+.hidden-calander-container {
+  grid-column: 2 / span 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hidden-calander-div {
+  z-index: 1;
+  width: 561px;
+  min-height: 460px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+  margin: -1em -1em -1em -1em;
+  color: black;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-gap: 1em;
+  display: none;
+}
+
+.hidden-date-input {
+  border-color: rgb(176, 176, 176);
+  border-radius: 8px 8px 8px 8px;
+  border-style: solid;
+  border-width: 1px;
+  grid-column: 2 / span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+  grid-auto-columns: minmax(82px, auto);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 1em;
+}
+
+.hidden-nights-sum {
+  grid-column: 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  padding: 1em;
+}
+
+.number-nights {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.dates-of-nights {
+  color: rgb(113, 113, 113);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.hidden-close-button {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+.clear-dates {
+  cursor: pointer;
+  background: rgb(247, 247, 247);
+  color: rgb(0, 0, 0);
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
+  padding: 8px;
+}
+
+.close-button {
+  cursor: pointer;
+  background: rgb(34, 34, 34);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
+  padding: 8px;
+
+  text-align: center;
+
+  border-radius: 10px;
+}
+
+/* .date-value {
+  font-size: 14px;
+} */
+
+/* .check-in {
+  grid-column: 1 / span 1;
+}
+
+.check-out {
+  grid-column: 2 / span 1;
+} */
+
+/* ----------------------------------- */
+/* Guest Info CSS  */
+/* ----------------------------------- */
+
+.guests {
+  grid-column: 1 / span 2;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(34, 34, 34);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.guests-psudo-boarder {
+  grid-column: 1 / span 2;
+  border-color: rgb(176, 176, 176);
+  border-radius: 0px 0px 0px 8px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.guests-input {
+  display: grid;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.guests-value {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.guests-label {
+  font-size: 10px;
+}
+
+/* ----------------------------------- */
+/* Reservation Button Info CSS  */
+/* ----------------------------------- */
+
+.reservation-button {
+  grid-column: 1 / span 2;
+  justify-self: center;
+}
+
+.res-button {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+
+  background: #d70466;
+
+  border-radius: 10px;
+  padding: 8px;
+
+  cursor: pointer;
+}
+
+.res-button h3 {
+  font-size: 16px;
+  line-height: 40px;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: fff;
+}
+
+.res-button:hover {
+  background: #b30355;
+}
+
+.disclaimer {
+  grid-column: 1 / span 2;
+}
+
+/* ----------------------------------- */
+/* Disclaimer Details CSS  */
+/* ----------------------------------- */
+.disclaimer {
+  margin-top: 8px;
+  justify-self: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+/* ----------------------------------- */
+/* Line Item CSS  */
+/* ----------------------------------- */
+.cost-breakdown {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: start;
+}
+
+.line-item {
+  text-decoration: underline;
+}
+
+/* ----------------------------------- */
+/* Total  CSS  */
+/* ----------------------------------- */
+
+.total {
+  grid-column: 1 / span 2;
+}
+
+.total-psudo-boarder {
+  grid-column: 1 / span 2;
+  border-color: rgb(176, 176, 176);
+  border-radius: 0px 0px 0px 8px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.total-box {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-items: start;
+  font-weight: bold;
+}
+
+.total-label {
+  grid-column: 1 / span 1;
+}
+
+.total-amount {
+  grid-column: 2 / span 1;
+}

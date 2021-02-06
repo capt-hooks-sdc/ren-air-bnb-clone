@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import Styles from './styles/DateTextInput.module.css';
 
+import CalenderPicker from './CalenderPicker.jsx'
+
 class DateTextInput extends React.Component {
 
   constructor(props) {
@@ -10,11 +12,13 @@ class DateTextInput extends React.Component {
 
     this.state = {
       type: this.props.type,
-      value: ''
+      value: '',
+      // datePickerVisable:false
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.openDatePicker = this.openDatePicker.bind(this);
   }
 
     handleChange(event) {
@@ -25,22 +29,34 @@ class DateTextInput extends React.Component {
     handleSubmit(event) {
       event.preventDefault();
       this.props.onSubmit(this.state.type, this.state.value);
-
-
     }
 
-
-
     render () {
+      var hidden;
+      if (this.props.calanderVisable) {
+        hidden = (<CalenderPicker firstMoment={this.props.firstMoment}
+          lastMoment={this.props.lastMoment}
+          raiseDate={this.props.raiseDate}
+          toggleCalanderVisable={this.props.toggleCalanderVisable}
+          handleTextInput = {this.props.handleTextInput}/>)
+      }
+
       return (
-        <form onSubmit={this.handleSubmit} ref="dateimput" onClick={() => {this.props.toggleCalanderVisable(true)}}>
+        <div className={Styles['date-input']}>
 
-          <label className={Styles.bookingLabel}>
+          {hidden}
 
-            {this.state.type === 'checkIn-book_it' ? 'CHECK-IN' : 'CHECKOUT'}
-            <input className={Styles["date-imput"]} id={this.state.type} placeholder="Add date" type="text" placeholder='MM/DD/YYYY' onChange={this.handleChange} value={this.state.value.length > 0 ? this.state.value : this.props.value} />
-          </label>
-        </form >
+          <div className={Styles['check-in']} onClick={this.props.toggleCalanderVisable}>
+            <div className={Styles['date-label']}> Check In </div>
+            <div className={Styles['date-value']}>{this.props.firstMoment ? this.props.firstMoment.format('MM/DD/YY') : 'MM/DD/YY'}</div>
+          </div>
+
+
+          <div className={Styles['check-out']} onClick={this.props.toggleCalanderVisable}>
+            <div className={Styles['date-label']}>Check Out</div>
+            <div className={Styles['date-value']}>{this.props.lastMoment ? this.props.lastMoment.format('MM/DD/YY') : 'MM/DD/YY'}</div>
+          </div>
+        </div>
         )
       }
  }

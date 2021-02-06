@@ -30,24 +30,23 @@ class CalendarDay extends React.Component {
 
 
   render () {
-    console.log(`in Day Render: ${this.props.selected}`);
+    // let classStr = this.state.classes;
+    let classStr = 'calday';
 
-    let classStr = this.state.classes;
     let specialStr = '';
     if (this.props.selected) {
-      console.log('----------------------------In Selected');
       specialStr += "selected";
     } else if (this.props.bwselected) {
-      console.log('In BW Selected');
       specialStr += "bwselected";
     }
-
     if (this.state.reserved) {
       specialStr += "reserved";
     }
 
+    console.log(specialStr)
+
     return (
-      <td className={Styles[specialStr]} onClick={this.dayClickHandler}>{
+      <td className={`${Styles[specialStr]} ${Styles[classStr]}`} onClick={this.dayClickHandler}>{
         this.props.day}
       </td>
     )

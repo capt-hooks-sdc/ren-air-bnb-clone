@@ -1,0 +1,61 @@
+.LodgingDetailsContainer > div {
+  padding: 1em;
+}
+
+.info-header {
+  grid-row: 1 / span 1;
+  font-family: "Roboto", sans-serif;
+  /* padding: 1em; */
+}
+
+.lodging-header {
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.lodging-header-psudo-boarder {
+  grid-column: 1 / span 2;
+  border-color: rgb(176, 176, 176);
+  border-radius: 0px 0px 0px 8px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.loging-breakdown {
+  color: #222222;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.lodging-feature {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 19fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.lodging-feature-icon {
+  grid-column: 1 / span 1;
+}
+
+.lodging-feature-name {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+
+.lodging-feature-extra {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  color: rgb(113, 113, 113);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}

@@ -1,15 +1,36 @@
-.bookingLabel {
-  color: rgb(34, 34, 34);
-  display: block;
-  font-family: 'Montserrat', sans-serif;
+.date-input {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-weight: bold;
   font-size: 10px;
-  left: 12px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  /* position: absolute; */
-  text-overflow: ellipsis;
-  text-size-adjust: 100%;
+  color: rgb(34, 34, 34);
   text-transform: uppercase;
-  top: 12px;
-  color: rgb(34, 34, 34)
-};
+  grid-auto-columns: minmax(82px, auto);
+  margin-bottom: 1em;
+  grid-gap: 1em;
+}
+
+.check-in {
+  grid-column: 1 / span 1;
+}
+
+.check-out {
+  grid-column: 2 / span 1;
+  border-left: solid 1px;
+  padding-left: 1em;
+}
+
+.date-value {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.date-value {
+  font-size: 14px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  padding: 5px 6px 5px 0px;
+}
