@@ -71,7 +71,7 @@ MongoClient.connect(url, (err, client) => {
     const b = Math.floor(Math.random() * 14) + 10;
 
     collec.insertOne({
-      id: i, name: faker.fake('{lorem.word}'), image_url: faker.fake('{image.imageUrl}'), superhost: faker.fake('{random.boolean}'),
+      id: i, name: faker.fake('{{lorem.word}}'), image_url: faker.fake('{{image.imageUrl}}'), superhost: faker.fake('{{random.boolean}}'),
     }).catch((e) => console.log(e));
   }
 
