@@ -271,3 +271,93 @@
 {"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":246409,"time":"2021-02-10T00:45:14.191Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
 {"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":246409,"time":"2021-02-10T00:45:14.194Z","msg":"Agent state changed from connected to started."}
 {"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":246409,"time":"2021-02-10T00:45:15.195Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480062,"time":"2021-02-11T20:01:33.891Z","msg":"Using New Relic for Node.js. Agent version: 7.1.1; Node version: v12.19.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480062,"time":"2021-02-11T20:01:33.974Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480062,"time":"2021-02-11T20:01:34.027Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480062,"time":"2021-02-11T20:01:34.027Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480062,"time":"2021-02-11T20:01:36.078Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480062,"time":"2021-02-11T20:01:36.078Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BW2txoCpDb4vAC6CAVDit19gJY10AAgBAAAnIQEAB1M-AgRQ4rddAwAFNy4xLjEACWVyaWMtWDU3MAADc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480062,"time":"2021-02-11T20:01:36.078Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3047937/applications/1357035357","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480062,"time":"2021-02-11T20:01:36.079Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480062,"time":"2021-02-11T20:01:36.081Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480062,"time":"2021-02-11T20:01:37.082Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480746,"time":"2021-02-11T20:03:46.396Z","msg":"Using New Relic for Node.js. Agent version: 7.1.1; Node version: v12.19.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480746,"time":"2021-02-11T20:03:46.478Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480746,"time":"2021-02-11T20:03:46.528Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480746,"time":"2021-02-11T20:03:46.528Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480746,"time":"2021-02-11T20:03:48.471Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480746,"time":"2021-02-11T20:03:48.472Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BRGGP2DUopXkAC6CAVDit19gJY3sAAgBAAAnIQEAB1XqAgRQ4rddAwAFNy4xLjEACWVyaWMtWDU3MAADc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480746,"time":"2021-02-11T20:03:48.472Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3047937/applications/1357035357","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480746,"time":"2021-02-11T20:03:48.473Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480746,"time":"2021-02-11T20:03:48.475Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480746,"time":"2021-02-11T20:03:49.476Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480967,"time":"2021-02-11T20:04:39.196Z","msg":"Using New Relic for Node.js. Agent version: 7.1.1; Node version: v12.19.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480967,"time":"2021-02-11T20:04:39.277Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480967,"time":"2021-02-11T20:04:39.321Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480967,"time":"2021-02-11T20:04:39.321Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480967,"time":"2021-02-11T20:04:41.132Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480967,"time":"2021-02-11T20:04:41.133Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BXXv_Sydh560AC6CAVDit19gJY4oAAgBAAAnIQEAB1bHAgRQ4rddAwAFNy4xLjEACWVyaWMtWDU3MAADc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480967,"time":"2021-02-11T20:04:41.133Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3047937/applications/1357035357","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480967,"time":"2021-02-11T20:04:41.134Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480967,"time":"2021-02-11T20:04:41.137Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":480967,"time":"2021-02-11T20:04:42.138Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481250,"time":"2021-02-11T20:05:42.486Z","msg":"Using New Relic for Node.js. Agent version: 7.1.1; Node version: v12.19.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481250,"time":"2021-02-11T20:05:42.562Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481250,"time":"2021-02-11T20:05:42.612Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481250,"time":"2021-02-11T20:05:42.612Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481250,"time":"2021-02-11T20:05:44.473Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481250,"time":"2021-02-11T20:05:44.474Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID Bfc-eg_WfJmgAC6CAVDit19gJY5kAAgBAAAnIQEAB1fiAgRQ4rddAwAFNy4xLjEACWVyaWMtWDU3MAADc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481250,"time":"2021-02-11T20:05:44.474Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3047937/applications/1357035357","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481250,"time":"2021-02-11T20:05:44.475Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481250,"time":"2021-02-11T20:05:44.477Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481250,"time":"2021-02-11T20:05:45.478Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481574,"time":"2021-02-11T20:07:02.998Z","msg":"Using New Relic for Node.js. Agent version: 7.1.1; Node version: v12.19.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481574,"time":"2021-02-11T20:07:03.084Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481574,"time":"2021-02-11T20:07:03.137Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481574,"time":"2021-02-11T20:07:03.137Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481574,"time":"2021-02-11T20:07:05.039Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481574,"time":"2021-02-11T20:07:05.039Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BcBzK_yHSNYkAC6CAVDit19gJY7cAAgBAAAnIQEAB1kmAgRQ4rddAwAFNy4xLjEACWVyaWMtWDU3MAADc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481574,"time":"2021-02-11T20:07:05.039Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3047937/applications/1357035357","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481574,"time":"2021-02-11T20:07:05.041Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481574,"time":"2021-02-11T20:07:05.043Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":481574,"time":"2021-02-11T20:07:06.044Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482234,"time":"2021-02-11T20:10:28.166Z","msg":"Using New Relic for Node.js. Agent version: 7.1.1; Node version: v12.19.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482234,"time":"2021-02-11T20:10:28.220Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482234,"time":"2021-02-11T20:10:28.270Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482234,"time":"2021-02-11T20:10:28.270Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482234,"time":"2021-02-11T20:10:30.130Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482234,"time":"2021-02-11T20:10:30.130Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BbJapTetxeKxAC6CAVDit19gJY-QAAgBAAAnIQEAB1u6AgRQ4rddAwAFNy4xLjEACWVyaWMtWDU3MAADc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482234,"time":"2021-02-11T20:10:30.130Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3047937/applications/1357035357","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482234,"time":"2021-02-11T20:10:30.132Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482234,"time":"2021-02-11T20:10:30.135Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482234,"time":"2021-02-11T20:10:31.136Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482466,"time":"2021-02-11T20:11:25.408Z","msg":"Using New Relic for Node.js. Agent version: 7.1.1; Node version: v12.19.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482466,"time":"2021-02-11T20:11:25.494Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482466,"time":"2021-02-11T20:11:25.545Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482466,"time":"2021-02-11T20:11:25.546Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482466,"time":"2021-02-11T20:11:27.428Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482466,"time":"2021-02-11T20:11:27.428Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BfkVNlyTv150AC6CAVDit19gJY_MAAgBAAAnIQEAB1yiAgRQ4rddAwAFNy4xLjEACWVyaWMtWDU3MAADc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482466,"time":"2021-02-11T20:11:27.428Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3047937/applications/1357035357","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482466,"time":"2021-02-11T20:11:27.429Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482466,"time":"2021-02-11T20:11:27.431Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482466,"time":"2021-02-11T20:11:28.431Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482610,"time":"2021-02-11T20:11:52.407Z","msg":"Using New Relic for Node.js. Agent version: 7.1.1; Node version: v12.19.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482610,"time":"2021-02-11T20:11:52.494Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482610,"time":"2021-02-11T20:11:52.546Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482610,"time":"2021-02-11T20:11:52.546Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482610,"time":"2021-02-11T20:11:54.494Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482610,"time":"2021-02-11T20:11:54.494Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BRUAruvgOHPsAC6CAVDit19gJY_MAAgBAAAnIQEAB10yAgRQ4rddAwAFNy4xLjEACWVyaWMtWDU3MAADc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482610,"time":"2021-02-11T20:11:54.494Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3047937/applications/1357035357","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482610,"time":"2021-02-11T20:11:54.495Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482610,"time":"2021-02-11T20:11:54.497Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482610,"time":"2021-02-11T20:11:55.498Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482706,"time":"2021-02-11T20:12:10.046Z","msg":"Using New Relic for Node.js. Agent version: 7.1.1; Node version: v12.19.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482706,"time":"2021-02-11T20:12:10.123Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482706,"time":"2021-02-11T20:12:10.171Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482706,"time":"2021-02-11T20:12:10.171Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482706,"time":"2021-02-11T20:12:11.952Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482706,"time":"2021-02-11T20:12:11.952Z","msg":"Connected to collector-007.newrelic.com:443 with agent run ID BamHTAyHXOW8AC6CAVDit19gJZAIAAgBAAAnIQEAB12SAgRQ4rddAwAFNy4xLjEACWVyaWMtWDU3MAADc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482706,"time":"2021-02-11T20:12:11.952Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/3047937/applications/1357035357","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482706,"time":"2021-02-11T20:12:11.953Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482706,"time":"2021-02-11T20:12:11.955Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"eric-X570","pid":482706,"time":"2021-02-11T20:12:12.955Z","msg":"Starting initial 1000ms harvest."}

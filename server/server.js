@@ -35,7 +35,7 @@ app.get('/lodge', cors(), (req, res) => {
   // console.log(g);
 });
 app.get('/awstry', (req, res) => {
-  awsdy.getMovies(req, res);
+  awsdy.searchMovies(req, res);
 });
 app.post('/awstry', (req, res) => {
   awsdy.addMovie(req, res);

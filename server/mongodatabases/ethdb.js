@@ -391,7 +391,7 @@ async function run() {
 
   const myContract1 = new web3.eth.Contract(abi, address);
 
-  const transaction = myContract1.methods.retrievelodges('d');
+  const transaction = myContract1.methods.retrievelodges('ClubhouseBest');
   // console.log(transaction);
   const options = {
     to: transaction._parent._address,

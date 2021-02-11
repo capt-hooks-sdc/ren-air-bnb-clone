@@ -32,7 +32,7 @@ const addMovie = function (req, res) {
   AWS.config.update(config.aws_remote_config);
   const docClient = new AWS.DynamoDB.DocumentClient();
   const Item = { ...req.body };
-  Item.id = 101;
+  Item.id = req.body.id;
   const params = {
     TableName: config.aws_table_name,
     Item,
@@ -54,8 +54,38 @@ const addMovie = function (req, res) {
     }
   });
 };
+const searchMovies = function (req, res) {
+  AWS.config.update(config.aws_remote_config);
+  const docClient = new AWS.DynamoDB.DocumentClient();
+  const params = {
+    TableName: config.aws_table_name,
+    KeyConditionExpression: '#isd = :icd',
+    ExpressionAttributeNames: {
+      '#isd': 'id',
+    },
+    ExpressionAttributeValues: {
+      ':icd': Number(req.query.id),
+    },
+  };
+
+  docClient.query(params, (err, data) => {
+    if (err) {
+      console.error('Unable to query. Error:', JSON.stringify(err, null, 2));
+    } else {
+      console.log('Query succeeded.');
+      data.Items.forEach((item) => {
+        console.log(item);
+      });
+      res.send({
+        success: true,
+        movies: data.Items,
+      });
+    }
+  });
+};
 
 module.exports = {
   getMovies,
   addMovie,
+  searchMovies,
 };
